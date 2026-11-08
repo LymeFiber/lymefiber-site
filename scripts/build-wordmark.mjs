@@ -9,7 +9,7 @@ const SIZE = 100;
 // Extra space before each letter, as a fraction of the font size.
 // Taken from the original logo's manual kerning (Inkscape dx / 45.16 font size).
 const TRACK = {
-  Lyme: [0, -0.18, 0, -0.044],
+  Lyme: [0, -0.145, 0, -0.044],
   Fiber: [-0.025, -0.045, -0.026, -0.032, -0.039],
 };
 
