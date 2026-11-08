@@ -1,0 +1,19 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Wordmark comparison</title>
+<style>
+  body { font-family: system-ui, sans-serif; background: #faf7f0; color: #2b2b2b; margin: 2rem; }
+  .row { display: flex; align-items: center; gap: 2rem; margin: 1.5rem 0; }
+  .row span { width: 12rem; }
+  /* PNG has padding: its letters span 652x156 of 794x227, so scale to match letter height */
+  .old { height: 145.5px; margin: -24.4px -12px -45px -11px; }
+  .new { height: 100px; }
+  .overlay { position: relative; height: 100px; }
+  .overlay img { position: absolute; left: 0; top: 0; opacity: .5; }
+  .dark { background: #004f3e; padding: 1rem; }
+</style>
+<h1>LymeFiber wordmark: original vs. Sorts Mill Goudy</h1>
+<div class="row"><span>Original (Goudy Old Style)</span><img class="old" src="original-logo.png" alt=""></div>
+<div class="row"><span>New (Sorts Mill Goudy)</span><img class="new" src="../src/assets/wordmark.svg" alt=""></div>
+<div class="row"><span>Overlaid at 50%</span><div class="overlay"><img class="old" src="original-logo.png" alt=""><img class="new" src="../src/assets/wordmark.svg" alt=""></div></div>
+<div class="row"><span>Reverse, on dark green</span><div class="dark"><img class="new" src="../src/assets/wordmark-reverse.svg" alt=""></div></div>
