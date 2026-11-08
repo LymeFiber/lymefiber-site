@@ -1,0 +1,22 @@
+---
+import { getNotice, getSettings } from '../lib/data';
+import { formatPostedAt, renderNoticeMessage, shouldShowNotice } from '../lib/notice';
+import { replaceTokens } from '../lib/tokens';
+import type { Notice } from '../lib/schemas';
+
+interface Props { notice?: Notice }
+const notice = Astro.props.notice ?? getNotice();
+const show = shouldShowNotice(notice);
+const message = show ? renderNoticeMessage(replaceTokens(notice.message, getSettings()).text) : '';
+const posted = formatPostedAt(notice.posted_at);
+const labels = { outage: 'Service notice', maintenance: 'Planned maintenance', info: 'Notice' };
+---
+{show && (
+  <div class={`notice notice--${notice.level}`} role="status">
+    <div class="notice__inner">
+      <strong class="notice__label">{labels[notice.level]}:</strong>
+      <span class="notice__message" set:html={message} />
+      {posted && <span class="notice__time">{posted}</span>}
+    </div>
+  </div>
+)}
