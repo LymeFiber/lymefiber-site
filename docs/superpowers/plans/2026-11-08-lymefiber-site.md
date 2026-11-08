@@ -116,7 +116,7 @@ EDITING.md, HANDOFF.md
 
 - [ ] **Step 1:** Write `snapshot.mjs`. It fetches `https://www.lymefiber.net/wp-json/wp/v2/pages?per_page=100`, `/posts?per_page=100`, `/categories`, and the three `wp-sitemap-*.xml` files. It saves the rendered HTML of each page and downloads every `wp-content/uploads` file linked from page content. Use `fetch` with a 1 request/second limit and a `User-Agent` naming the project.
 - [ ] **Step 2:** Run `node migration/snapshot.mjs`. Expected: 34 page JSON files, 13 files under `uploads/` (11 distinct PDFs incl. both `Phone-LOA.pdf` versions, plus the CSV and `Phone-Service.png`), and `old-urls.txt` with ≥ 34 + 19 + upload paths.
-- [ ] **Step 3:** Verify `shasum -a 256` of `uploads/2021/08/Phone-LOA.pdf` = `2420db74…dcd7` (matches spec finding).
+- [ ] **Step 3:** Verify `uploads/2020/11/Phone-LOA.pdf` is a PDF (`file` reports PDF). The 2021/08 and 2021/11 copies are 404 on the live site.
 - [ ] **Step 4: Commit** `migration/` ("chore: snapshot WordPress site").
 
 ---
@@ -271,7 +271,7 @@ EDITING.md, HANDOFF.md
   - contact: map removed.
   - expansion: rewrite the Orford text to cover Orford and Hanover. The Hanover paragraphs go inside `> **Placeholder — owner to review:** …`.
   - about: from the home "What is LymeFiber?" text and Goals.
-- [ ] **Step 3:** Copy the 11 kept files and the CSV from the snapshot into `public/documents/`, keeping their original file names. Use the 2021/08 `Phone-LOA.pdf`.
+- [ ] **Step 3:** Copy the 11 kept files and the CSV from the snapshot into `public/documents/`, keeping their original file names. Use the 2020/11 `Phone-LOA.pdf` (the only copy that exists).
 - [ ] **Step 4: Verify:**
   - `npm run build` succeeds.
   - `grep -r "wp-content\|lymefiber.net/[a-z0-9-]*/\"" dist/ --include=*.html` finds nothing.

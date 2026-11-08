@@ -1,0 +1,212 @@
+{
+  "id": 1946,
+  "date": "2024-10-10T16:34:43",
+  "date_gmt": "2024-10-10T20:34:43",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=1946"
+  },
+  "modified": "2026-01-05T18:08:54",
+  "modified_gmt": "2026-01-05T23:08:54",
+  "slug": "machine-readable-labels",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/machine-readable-labels/",
+  "title": {
+    "rendered": "Machine Readable Labels"
+  },
+  "content": {
+    "rendered": "\n<figure class=\"wp-block-table alignfull\"><table><tbody><tr><td class=\"has-text-align-center\" data-align=\"center\">unique_plan_id</td><td>provider_name</td><td>service_plan_name</td><td>tier_plan_name</td><td>connection_type</td><td>monthly_price</td><td>intro_rate</td><td>intro_rate_price</td><td>intro_rate_time</td><td>contract_req</td><td>contract_time</td><td>contract_terms_url</td><td>early_termination_fee</td><td>single_purchase_fee_descr</td><td>single_purchase_fees</td><td>monthly_provider_fee_descr</td><td>monthly_provider_fee</td><td>tax</td><td>bundle_discounts_url</td><td>typical_download_speed</td><td>typical_upload_speed</td><td>typical_latency</td><td>monthly_data_allow</td><td>over_usage_data_price</td><td>additional_data_increment</td><td>data_allowance_policy_url</td><td>network_management_policy_url</td><td>privacy_policy_url</td><td>customer_support_phone</td><td>\ncustomer_support_web\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624940100ECR20240802</td><td>LymeFiber</td><td>Basic Residential 75/75 MBPS</td><td>Basic Residential</td><td>Fixed</td><td>$72.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $25.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.lymefiber.net/</a></td><td>75 MBPS</td><td>75 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624940100ECB20240802</td><td>LymeFiber</td><td>Basic business 75/75 MBPS</td><td>Basic<br>\nBusiness</td><td>Fixed</td><td>$90.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $35.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noreferrer noopener\">https://www.lymefiber.net/</a></td><td>75 MBPS</td><td>75 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624940300ECR20240802</td><td>LymeFiber</td><td>Standard Residential 300/300 MBPS</td><td>Standard Residential</td><td>Fixed</td><td>$104.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $25.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a></td><td>300 MBPS</td><td>300 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624940300ECB20240802</td><td>LymeFiber</td><td>Standard Business 300/300 MBPS</td><td>Standard Business</td><td>Fixed</td><td>$124.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $35.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a></td><td>300 MBPS</td><td>300 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624940500ECB20240802</td><td>LymeFiber</td><td>Ultra Business 500/500 MBPS</td><td>Ultra<br>\nBusiness</td><td>Fixed</td><td>$159.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $35.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a></td><td>500 MBPS</td><td>500 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624941000ECR20240802</td><td>LymeFiber</td><td>Wicked Residential 1000/1000 MBPS</td><td>Wicked<br>\nResidential</td><td>Fixed</td><td>$134.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $25.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a></td><td>1000 MBPS</td><td>1000 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr><tr><td class=\"has-text-align-center\" data-align=\"center\">F00290624941000ECB20240802</td><td>LymeFiber</td><td>Wicked Business 1000/1000 MBPS</td><td>Wicked<br>\nBusiness</td><td>Fixed</td><td>$250.00</td><td>N/A</td><td>N/A</td><td>N/A</td><td>No</td><td>N/A</td><td>N/A</td><td>$0.00</td><td>Inside installation fee; phone battery backup</td><td>$99.00; included with phone</td><td>Router; Unlimited local and long-distance calling</td><td>Included; $35.00</td><td>$0.00</td><td><a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a></td><td>1000 MBPS</td><td>1000 MBPS</td><td>3 ms</td><td>Unlimited</td><td>$0.00</td><td>N/A</td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/lymefiber-subscriber-agreement-2/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/lymefiber-subscriber-agreement-2/</a></td><td><a href=\"https://www.lymefiber.net/privacy-policy/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/privacy-policy/</a></td><td>(833) 795-5300</td><td>\n<a href=\"https://www.lymefiber.net/\" target=\"_blank\" rel=\"noopener\">https://www.lymefiber.net/</a>\n</td></tr></tbody></table></figure>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>unique_plan_id provider_name service_plan_name tier_plan_name connection_type monthly_price intro_rate intro_rate_price intro_rate_time contract_req contract_time contract_terms_url early_termination_fee single_purchase_fee_descr single_purchase_fees monthly_provider_fee_descr monthly_provider_fee tax bundle_discounts_url typical_download_speed typical_upload_speed typical_latency monthly_data_allow over_usage_data_price additional_data_increment data_allowance_policy_url network_management_policy_url privacy_policy_url customer_support_phone customer_support_web F00290624940100ECR20240802 LymeFiber Basic Residential 75/75 MBPS Basic Residential Fixed $72.00 N/A N/A N/A No N/A N/A $0.00 Inside installation fee; phone battery backup $99.00; included [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 10,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-1946",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1946",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/10"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=1946"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 9,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1946/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2146,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1946/revisions/2146"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=1946"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

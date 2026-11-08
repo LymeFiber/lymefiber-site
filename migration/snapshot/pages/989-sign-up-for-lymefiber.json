@@ -1,0 +1,212 @@
+{
+  "id": 989,
+  "date": "2018-11-20T09:28:13",
+  "date_gmt": "2018-11-20T14:28:13",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=989"
+  },
+  "modified": "2025-11-17T08:20:39",
+  "modified_gmt": "2025-11-17T13:20:39",
+  "slug": "sign-up-for-lymefiber",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/sign-up-for-lymefiber/",
+  "title": {
+    "rendered": "Sign Up For LymeFiber Services!"
+  },
+  "content": {
+    "rendered": "<div class=\"signup-form\">Please complete the signup form as well as you can (it&#8217;s pretty self-explanatory). At the end of the form, we provide a comment box where you can ask questions or pass on instructions.Please note that there&#8217;s no obligation now, and only a month-to-month agreement once we start your service. By completing this subscription form you are agreeing to let LymeFiber staff on your property to conduct the initial survey.</p>\n</div>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Please complete the signup form as well as you can (it&#8217;s pretty self-explanatory). At the end of the form, we provide a comment box where you can ask questions or pass on instructions.Please note that there&#8217;s no obligation now, and only a month-to-month agreement once we start your service. By completing this subscription form you [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "default",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "default",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-989",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/989",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=989"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 11,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/989/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2104,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/989/revisions/2104"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=989"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

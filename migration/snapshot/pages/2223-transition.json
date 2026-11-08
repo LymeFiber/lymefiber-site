@@ -1,0 +1,212 @@
+{
+  "id": 2223,
+  "date": "2026-11-05T17:27:07",
+  "date_gmt": "2026-11-05T22:27:07",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=2223"
+  },
+  "modified": "2026-11-06T14:14:36",
+  "modified_gmt": "2026-11-06T19:14:36",
+  "slug": "transition",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/transition/",
+  "title": {
+    "rendered": "2027 LymeFiber Operational Changes"
+  },
+  "content": {
+    "rendered": "\n<p class=\"wp-block-paragraph\">In 2027, LymeFiber will work with a new network operator to handle operations, technical and billing support, and repairs for our customers. As we move closer to the transition date, this page will provide more specific information about the changes.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>First, here’s what is NOT changing:</strong></p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Your pricing and internet speeds will stay the same</li>\n\n\n\n<li>Your phone number will stay the same if you have LymeFiber phone service,</li>\n\n\n\n<li>The entire LymeFiber network will remain owned and governed by the same group of local Lyme residents who originally built the network, and who commit to put our community first.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>What IS changing</strong><br>Since the beginning, LymeFiber has always relied on an external partner to operate our network. Those external partners do the vast majority of the work to maintain the network and deliver service to our customers, answer questions, and handle billing. Starting in 2027, the operating partner of the LymeFiber network will change to <a href=\"https://www.wcvt.com/\">Waitsfield and Champlain Valley Telecom</a> (WCVT). In practical terms, this means:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>The team you call for customer service and technical support will be WCVT staff.</li>\n\n\n\n<li>The technicians who come to your home for installations and repairs will be from WCVT.</li>\n\n\n\n<li>Your bill will come from WCVT’s billing system.</li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\">WCVT is an over 100-year-old, family-owned telecommunications company based in Waitsfield, Vermont, with a long track record of providing excellent, responsive, and customer-focused internet and phone service to rural New England communities. You can read more about WCVT at their website. We are confident that LymeFiber customers will be pleased with this change to the day-to-day operation of our network.</p>\n\n\n\n<p class=\"wp-block-paragraph\"><strong>What comes next</strong></p>\n\n\n\n<p class=\"wp-block-paragraph\">There is nothing you need to do right now. Over the coming weeks, we will send a few more updates with specifics, including:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li>Steps customers will need to take as part of the billing system and phone service transitions. Because of changes to the billing and voicemail systems associated with phone plans, customers will need to re-enter payment information for the new billing system and, for phone customers, save any voicemails you want to keep. We will provide more detailed instructions for doing this later this month.</li>\n\n\n\n<li>There will be a short service outage at the moment of transition. We will let everyone know when this outage will occur as early as possible, and with a second notice the day of the transition. We will schedule the switchover sometime in the month of December. Our current plan is for minimal disruption and that the outage will not occur around the holidays.</li>\n\n\n\n<li>There will be a delay in new installations. LymeFiber may need to pause in acting on new installations for a month or two. We encourage people to continue to sign up for service, but please know that new installation requests made after that date may not be acted on immediately. </li>\n</ul>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n\n\n\n<p class=\"has-background has-medium-font-size wp-block-paragraph\" style=\"background-color:#d9f2d9\"><strong>Questions</strong>?<br>Please send any questions you have to <a href=\"mailto:transition@lymefiber.net\">transition@lymefiber.net</a>. As we answer questions, we will also add them to this page so all can see. Thank you for being a LymeFiber customer.</p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>In 2027, LymeFiber will work with a new network operator to handle operations, technical and billing support, and repairs for our customers. As we move closer to the transition date, this page will provide more specific information about the changes. First, here’s what is NOT changing: What IS changingSince the beginning, LymeFiber has always relied [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-2223",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2223",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=2223"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 10,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2223/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2239,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2223/revisions/2239"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=2223"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

@@ -168,12 +168,12 @@ Content conversion: HTML → Markdown, stripping Beaver Builder/Astra markup, in
 | E911-Legal-Disclaimer-1.pdf | Phone |
 | Power-Outages-and-LymeFiber-Phone-Service.pdf | Phone |
 | LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf | Phone |
-| Phone-LOA.pdf (2021/08 version) | Customer Forms |
+| Phone-LOA.pdf (2020/11, the only copy that exists) | Customer Forms |
 | Installation-Letter-Of-Permission.pdf | Customer Forms |
 | LymeFiber-Contractor-List-and-UG-Specs-.pdf | Customer Forms |
 | broadband-facts-labels-2026-03-20-5-51-PM.csv | (FCC labels, not listed in Documents) |
 
-The 2020/11 and 2021/08 `Phone-LOA.pdf` files differ (checked by SHA-256). Keep the 2021/08 version, which is the one the current LOA page links to. Redirect the 2020/11 URL to it.
+Only the 2020/11 `Phone-LOA.pdf` exists on the live site. The 2021/08 and 2021/11 URLs that some pages link to return 404 (corrected 2026-11-08; an earlier checksum comparison had hashed the 404 page). Keep the 2020/11 file and redirect all three URLs to it.
 
 ### Dropped
 - Pages: Service Plans & Pricing (Draft), signup-successful, Career Opportunities (empty), Telephone Service Order (empty), Electronic Signature – Phone LOA (empty), the duplicate Sign Up page, the duplicate VoIP page, and the duplicate LOA page.

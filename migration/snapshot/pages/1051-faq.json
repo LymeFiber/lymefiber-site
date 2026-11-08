@@ -1,0 +1,212 @@
+{
+  "id": 1051,
+  "date": "2019-02-12T17:40:07",
+  "date_gmt": "2019-02-12T22:40:07",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=1051"
+  },
+  "modified": "2025-08-11T09:02:00",
+  "modified_gmt": "2025-08-11T13:02:00",
+  "slug": "faq",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/faq/",
+  "title": {
+    "rendered": "Frequently Asked Questions"
+  },
+  "content": {
+    "rendered": "\n<h1 class=\"wp-block-heading\">Frequently Asked Questions about LymeFiber</h1>\n\n\n\n<h2 class=\"wp-block-heading\">\n\t\t\t\t\tOur Goals\n\t\t\t\t</h2>\n\n\n\n<p class=\"wp-block-paragraph\">LymeFiber is a community-centered project offering fiber-optic Internet data service to residences, businesses, and public organizations in Lyme. Levels of service range from 100 Mbps up to 1 Gbps. All service is the same speed upload and download, and free of data caps.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Monthly rates begin at $72. Residential and business phone lines are available as an option starting at $25 per month.</p>\n\n\n\n<p class=\"wp-block-paragraph\">Our goals are:</p>\n\n\n\n<ul class=\"wp-block-list\">\n<li><strong>Universal Coverage.</strong> We aim to provide high-speed, fiber-optic-based Internet service to every reachable business and residence in Lyme.</li>\n\n\n\n<li><strong>Net Neutrality.</strong> LymeFiber will not throttle or otherwise interfere with your data.</li>\n\n\n\n<li><strong>A Future-Proof Design.</strong> Fiber-optic cable provides almost unlimited capacity for whatever new applications come along.</li>\n\n\n\n<li><strong>Competitive Pricing.</strong> The cost of our service will be competitive with similar service elsewhere in the region.</li>\n\n\n\n<li><strong>Community Focus.</strong> Bringing a needed service to Lyme &#8211; our community &#8211; is our primary goal.</li>\n</ul>\n\n\n\n<h2 class=\"wp-block-heading\">\n\t\t\t\t\tWhy Fiber?\n\t\t\t\t</h2>\n\n\n\n<p class=\"wp-block-paragraph\">In Lyme today many people have DSL, fixed wireless, or satellite Internet service. Why would we build a new network using fiber-optic cable?</p>\n\n\n\n<p class=\"wp-block-paragraph\">DSL service uses existing copper telephone wires. Much of that wiring was installed decades ago, and its quality varies throughout the town. As a result the data speeds available also vary. Moreover, available DSL speed drops off as you get farther from the telephone central office or from a remote DSL access module.\nFixed-wireless providers can provide service to many people in Lyme. However, their speeds top out in the same range as DSL, and our hilly topography prevents many others from getting service.<br></p>\n\n\n\n<p class=\"wp-block-paragraph\">Satellite services depend on having a &#8220;view&#8221; of the satellite in the sky. And the service is capped, meaning that if you send or receive more than a certain amount of data, you may incur additional charges, or your service may be throttled.</p>\n\n\n\n<p class=\"wp-block-paragraph\">All these services offer upload speeds that are much slower than download speeds. That may be OK for web browsing and reading email, but is not good if you are sharing large files or photos, running a business, or backing up your devices to the cloud.\nFiber-optic service has none of these limitations. It can offer much higher speeds, is symmetric &#8211; same speed up and down, and has no data limitations or data caps. Furthermore, its future is not limited, since the fiber cable that&#8217;s installed today is already capable of handling the higher speeds we expect in the coming decades.<br></p>\n\n\n\n<h2 class=\"wp-block-heading\">\n\t\t\t\t\tTimeline\n\t\t\t\t</h2>\n\n\n\n<p class=\"wp-block-paragraph\">\n\tIn July, 2020, our construction contractor, Eustis Cable, began installing fiber-optic cable on utility poles in town. We connected our first customers in November, 2020. The process of connecting all subscribers will take about six months. As yet we cannot predict when a given customer will be connected. As of November 2021 more than 450 subscribers have been<br>\nconnected and new subscribers are continuing to sign up.\n\t</p>\n\n\n\n<h2 class=\"wp-block-heading\">\n\t\t\t\t\tWho We Are\n\t\t\t\t</h2>\n\n\n\n<p class=\"wp-block-paragraph\">The LymeFiber network is a collaboration.\nThe long-standing Committee for Fiber Optic Infrastructure in Lyme (CFOIL) is a group of Lyme residents who recognized the unfulfilled need for modern high-speed Internet service throughout the town. Members of the committee include Rich Brown, Stephen Campbell, Simon Carr, Jack Elliott, Lee Larson, Chris Lea, Andy Lumley, Aaron Rich, James Ricker, David Roby, Mark Schiffman, and Walt Swift.<br>\n\nThe Lyme Foundation supported the early exploratory stages of the project. Now CFOIL has brought together investors from the community to form LymeFiber LLC, to oversee the actual build-out of the network.<br></p>\n\n\n\n<p class=\"wp-block-paragraph\"></p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Frequently Asked Questions about LymeFiber Our Goals LymeFiber is a community-centered project offering fiber-optic Internet data service to residences, businesses, and public organizations in Lyme. Levels of service range from 100 Mbps up to 1 Gbps. All service is the same speed upload and download, and free of data caps. Monthly rates begin at $72. [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "open",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "no-sidebar",
+    "site-content-layout": "page-builder",
+    "ast-site-content-layout": "normal-width-container",
+    "site-content-style": "unboxed",
+    "site-sidebar-style": "unboxed",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "disabled",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "default",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-1051",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1051",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=1051"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 19,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1051/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2063,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1051/revisions/2063"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=1051"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

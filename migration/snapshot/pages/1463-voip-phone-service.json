@@ -1,0 +1,212 @@
+{
+  "id": 1463,
+  "date": "2021-04-13T17:53:27",
+  "date_gmt": "2021-04-13T21:53:27",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=1463"
+  },
+  "modified": "2021-09-07T12:52:34",
+  "modified_gmt": "2021-09-07T16:52:34",
+  "slug": "voip-phone-service",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/voip-phone-service/",
+  "title": {
+    "rendered": "VoIP Phone Service"
+  },
+  "content": {
+    "rendered": "\n<h1>\n\t\tVoIP Phone Services\n\t</h1>\n\t<h6>Communication</h6>\t\t\n\t\t\t<p>If a subscriber requests phone service and is happy to have a new phone number assigned, that phone number can be set up within 48 hours.&nbsp; If a subscriber prefers to retain her/his phone number, it takes up to 10 days to transfer that number. Customers should NOT disconnect their current phone number prior to the transfer date. &nbsp;LymeFiber staff will inform you when the transfer is complete, so that you can contact your former telephone service company to make sure that they will no longer bill you for service.</p>\n\t<h6>No Hidden Fees</h6>\t\t\n\t\t\t<p>Never worry about what your bill is going to be. Local and long distance are included in monthly cost.&nbsp;</p>\n\t<h6>Home security</h6>\t\t\n\t\t\t<p>Home security systems can be compatible with digital phone service. You are advised to contact your local home security professional for more information.</p>\n\t<h6>Spam Calls</h6>\t\t\n\t\t\t<p>To cut down on annoying calls, LymeFiber recommends you enter your telephone number in the National Do Not Call Registry (<a href=\"http://www.donotcall.gov/\" target=\"_blank\" rel=\"noopener noreferrer\">www.donotcall.gov</a>). LymeFiber is also compatible with NomoRobo. To enroll in NomoRobo visit their website, <a href=\"https://www.nomorobo.com/\">NomoRobo.com</a>, and create an account.</p>\n\t<h6>Phone Jacks</h6>\t\t\n\t\t\t<p>Jacks throughout the house will not work unless ONT is connected to house wiring. Wiring up other jacks is billable, can cause issues with call quality and can be a source of outages should a power surge make its way into the ONT from the phone lines.</p>\n\t<h6>Battery Backup</h6>\t\t\n\t\t\t<p>Battery backup powers ONT phone lines for ~8 hours if power goes out at house. Battery doesn&#8217;t power your cordless phone / cordless phone base; need a phone that doesn&#8217;t require external power in order to make calls while power is out (same as landline).</p>\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>VoIP Phone Services Communication If a subscriber requests phone service and is happy to have a new phone number assigned, that phone number can be set up within 48 hours.&nbsp; If a subscriber prefers to retain her/his phone number, it takes up to 10 days to transfer that number. Customers should NOT disconnect their current [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 10,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "default",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "default",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "default",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-1463",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1463",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/10"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=1463"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 9,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1463/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 1512,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/1463/revisions/1512"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=1463"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

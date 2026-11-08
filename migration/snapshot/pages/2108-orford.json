@@ -1,0 +1,212 @@
+{
+  "id": 2108,
+  "date": "2025-11-17T16:57:56",
+  "date_gmt": "2025-11-17T21:57:56",
+  "guid": {
+    "rendered": "https://www.lymefiber.net/?page_id=2108"
+  },
+  "modified": "2025-12-17T11:39:28",
+  "modified_gmt": "2025-12-17T16:39:28",
+  "slug": "orford",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/orford/",
+  "title": {
+    "rendered": "Orford Landing Page"
+  },
+  "content": {
+    "rendered": "\n<h1>\n\t\t\tOrford, Your Fiber Network Is Here!\t</h1>\n\t<p>LymeFiber is pleased to announce that fiber optic internet is now available in select areas of Orford. Our basic service delivers <strong>100 Mbps symmetrical speeds for $72 per month</strong>. Optional telephone service, which can replace your Consolidated or Topsham bill, is available for <strong>$25 per month</strong>. Higher speed plans are also offered, including options up to <strong>1 Gigabit per second</strong>.</p>\n\t\t\t<a href=\"https://order.lymefiber.net\" target=\"_self\">\n\t\t\t\t\t\t\tSign Up Now!\n\t\t\t\t\t</a>\n<h2>\n\t\t\tWhy Households in Orford Choose LymeFiber\t</h2>\n\t<ul>\n<li>Symmetrical upload and download speeds</li>\n<li>No data caps or throttling</li>\n<li>Locally built and operated</li>\n<li>Reliable service during peak hours and storms</li>\n<li>Optional telephone service for $25 per month</li>\n</ul>\n\t\t\t<a href=\"https://order.lymefiber.net\" target=\"_blank\" rel=\"noopener\">\n\t\t\t\t\t\t\tCheck My Address\n\t\t\t\t\t</a>\n\t<blockquote>\n<p><strong>LymeFiber Service available north from the Lyme/Orford Town Border</strong></p>\n<p>River Rd. North to Rt. 10 intersection, including Sanborn Lane</p>\n<p>Route 10 north to 712 Dartmouth College Hwy (Rt. 10)</p>\n<p>Including the following roads connecting to Rt.10:</p>\n<p>Tree Farm Road to EOL</p>\n<p>Sawyer Brook Road to EOL</p>\n<p>Boat Landing Road Pole line on the road</p>\n<p>Hebb Drive to EOL</p>\n<p>Rte. 25A east from Rt. 10 to 2959 Rt. 25A</p>\n<p>Rte. 25A (Bridge St.) west from Rt. 10 to the Connecticut River</p>\n<p>Archertown Rd., east to the intersection with Tannery Rd., and Tannery Rd</p>\n<p>709 &amp; 712 route 10 Bellmore Dr</p>\n</blockquote>\n\t\t\t\t<img decoding=\"async\" src=\"\" alt=\"\" itemprop=\"image\" onerror=\"this.style.display='none'\" loading=\"lazy\" />\n\t<p>LymeFiber was created to bring <strong>reliable high-speed internet</strong> to communities that have been underserved for years. Our network is designed to support work-from-home, online learning, telehealth, and modern home technology.</p>\n<p>We take pride in <strong>serving our neighbors with responsive, local support.</strong></p>\n\t\t\t\t<img decoding=\"async\" src=\"\" alt=\"\" itemprop=\"image\" onerror=\"this.style.display='none'\" loading=\"lazy\" />\n\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Orford, Your Fiber Network Is Here! LymeFiber is pleased to announce that fiber optic internet is now available in select areas of Orford. Our basic service delivers 100 Mbps symmetrical speeds for $72 per month. Optional telephone service, which can replace your Consolidated or Topsham bill, is available for $25 per month. Higher speed plans [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 10,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "closed",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "default",
+    "site-content-layout": "",
+    "ast-site-content-layout": "default",
+    "site-content-style": "default",
+    "site-sidebar-style": "default",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "disabled",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-2108",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2108",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/10"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=2108"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 11,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2108/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2138,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/2108/revisions/2138"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=2108"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "id": 25,
+  "date": "2017-06-19T05:41:37",
+  "date_gmt": "2017-06-19T05:41:37",
+  "guid": {
+    "rendered": "https://websitedemos.net/astra-lite-demo-1/?page_id=2"
+  },
+  "modified": "2026-11-05T17:48:02",
+  "modified_gmt": "2026-11-05T22:48:02",
+  "slug": "home-2",
+  "status": "publish",
+  "type": "page",
+  "link": "https://www.lymefiber.net/",
+  "title": {
+    "rendered": "Home"
+  },
+  "content": {
+    "rendered": "\n\n\t\t\t<h1>\n\t\t\t\t\tBringing Fiber Internet Service to Lyme, and now Orford!\n\t\t\t\t</h1>\n\t\t\t<a href=\"http://order.lymefiber.net\" target=\"_self\"  role=\"button\">\n\t\t\t\t\t\tSign Up Now\n\t\t</a>\n\t<p><strong>What is LymeFiber?</strong></p>\n<p>LymeFiber is a community-centered project offering fiber-optic Internet data service to all residences, businesses, and public organizations in Lyme. Levels of service range from 100Mbps up to 1Gbps. All service is symmetrical &#8211; same speed upload and download &#8211; and is free of data caps. Monthly rates begin at $72.</p>\n<p>Residential and business phone lines are now available as an option starting at $25 per month.</p>\n<p>For more information, see our <a href=\"https://www.lymefiber.net/faq/\">Frequently Asked Questions page.</a></p>\n\t<p><strong>Goals:</strong></p>\n<ul>\n<li><strong>Universal Coverage.</strong> We aim to provide high-speed, fiber-optic-based Internet service to every reachable business and residence in Lyme.</li>\n<li><strong>Net Neutrality.</strong> LymeFiber will not throttle or otherwise interfere with your data.</li>\n<li><strong>A Future-Proof Design.</strong> Fiber-optic cable provides almost unlimited capacity for whatever new applications come along.</li>\n<li><strong>Competitive Pricing.</strong> The cost of our service will be competitive with similar service elsewhere in the region.</li>\n<li><strong>Community Focus.</strong> Bringing a needed service to Lyme &#8211; our community &#8211; is our primary goal.</li>\n</ul>\n\n",
+    "protected": false
+  },
+  "excerpt": {
+    "rendered": "<p>Bringing Fiber Internet Service to Lyme, and now Orford! Sign Up Now What is LymeFiber? LymeFiber is a community-centered project offering fiber-optic Internet data service to all residences, businesses, and public organizations in Lyme. Levels of service range from 100Mbps up to 1Gbps. All service is symmetrical &#8211; same speed upload and download &#8211; and [&hellip;]</p>\n",
+    "protected": false
+  },
+  "author": 2,
+  "featured_media": 0,
+  "parent": 0,
+  "menu_order": 0,
+  "comment_status": "closed",
+  "ping_status": "open",
+  "template": "",
+  "meta": {
+    "site-sidebar-layout": "no-sidebar",
+    "site-content-layout": "page-builder",
+    "ast-site-content-layout": "full-width-container",
+    "site-content-style": "unboxed",
+    "site-sidebar-style": "unboxed",
+    "ast-global-header-display": "",
+    "ast-banner-title-visibility": "",
+    "ast-main-header-display": "",
+    "ast-hfb-above-header-display": "",
+    "ast-hfb-below-header-display": "",
+    "ast-hfb-mobile-header-display": "",
+    "site-post-title": "disabled",
+    "ast-breadcrumbs-content": "",
+    "ast-featured-img": "",
+    "footer-sml-layout": "",
+    "ast-disable-related-posts": "",
+    "theme-transparent-header-meta": "default",
+    "adv-header-id-meta": "",
+    "stick-header-meta": "",
+    "header-above-stick-meta": "",
+    "header-main-stick-meta": "",
+    "header-below-stick-meta": "",
+    "astra-migrate-meta-layouts": "set",
+    "ast-page-background-enabled": "default",
+    "ast-page-background-meta": {
+      "desktop": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "ast-content-background-meta": {
+      "desktop": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "tablet": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      },
+      "mobile": {
+        "background-color": "var(--ast-global-color-5)",
+        "background-image": "",
+        "background-repeat": "repeat",
+        "background-position": "center center",
+        "background-size": "auto",
+        "background-attachment": "scroll",
+        "background-type": "",
+        "background-media": "",
+        "overlay-type": "",
+        "overlay-color": "",
+        "overlay-opacity": "",
+        "overlay-gradient": ""
+      }
+    },
+    "footnotes": ""
+  },
+  "class_list": [
+    "post-25",
+    "page",
+    "type-page",
+    "status-publish",
+    "hentry"
+  ],
+  "_links": {
+    "self": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/25",
+        "targetHints": {
+          "allow": [
+            "GET"
+          ]
+        }
+      }
+    ],
+    "collection": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages"
+      }
+    ],
+    "about": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/types/page"
+      }
+    ],
+    "author": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/users/2"
+      }
+    ],
+    "replies": [
+      {
+        "embeddable": true,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/comments?post=25"
+      }
+    ],
+    "version-history": [
+      {
+        "count": 27,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/25/revisions"
+      }
+    ],
+    "predecessor-version": [
+      {
+        "id": 2227,
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/pages/25/revisions/2227"
+      }
+    ],
+    "wp:attachment": [
+      {
+        "href": "https://www.lymefiber.net/wp-json/wp/v2/media?parent=25"
+      }
+    ],
+    "curies": [
+      {
+        "name": "wp",
+        "href": "https://api.w.org/{rel}",
+        "templated": true
+      }
+    ]
+  }
+}
