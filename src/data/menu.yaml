@@ -1,0 +1,32 @@
+items:
+  - label: Plans & Pricing
+    children:
+      - { label: Service Plans & Pricing, href: /plans/ }
+      - { label: Broadband Fact Labels, href: /plans/broadband-labels/ }
+  - label: Get Connected
+    children:
+      - { label: Sign Up, href: "{{signup_url}}", external: true }
+      - { label: Installation & Scheduling, href: /connect/installation/ }
+      - { label: Exterior Connection, href: /connect/exterior/ }
+      - { label: Contractor List & Specs, href: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf }
+  - label: Phone Service
+    children:
+      - { label: VoIP Phone Service, href: /phone/ }
+      - { label: Telephone User Guide, href: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf }
+      - { label: Power Outages & Phone Service, href: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf }
+      - { label: E911 Disclaimer, href: /documents/E911-Legal-Disclaimer-1.pdf }
+      - { label: Phone Letter of Agency, href: /documents/Phone-LOA.pdf }
+  - label: Support
+    children:
+      - { label: Support Home, href: /support/ }
+      - { label: FAQ, href: /support/faq/ }
+      - { label: System Upgrade FAQ, href: /support/system-upgrade/ }
+      - { label: Contact Us, href: /support/contact/ }
+      - { label: Billing Portal, href: "{{billing_portal_url}}", external: true }
+      - { label: Phone Portal, href: "{{phone_portal_url}}", external: true }
+  - label: About
+    children:
+      - { label: About LymeFiber, href: /about/ }
+      - { label: 2027 Transition, href: /about/transition/ }
+      - { label: Expanding to Orford & Hanover, href: /about/expansion/ }
+      - { label: Policies & Documents, href: /documents/ }

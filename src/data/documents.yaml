@@ -1,0 +1,56 @@
+documents:
+  - title: Subscriber Agreement and Terms of Service
+    description: The agreement between LymeFiber and each subscriber.
+    file: /documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf
+    category: Policies
+    updated: 2022-01-01
+  - title: Privacy Policy
+    description: What information we collect and how we use it.
+    file: /documents/LymeFiber-Privacy-Policy-01_01_2022.pdf
+    category: Policies
+    updated: 2022-01-01
+  - title: Acceptable Use Policy
+    description: Rules for using the LymeFiber network.
+    file: /documents/LymeFiber-Acceptable-Use-Policy.pdf
+    category: Policies
+    updated: 2022-01-01
+  - title: Open Internet Transparency Policy
+    description: How we manage the network; we do not throttle or block lawful traffic.
+    file: /documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf
+    category: Policies
+    updated: 2022-01-01
+  - title: DMCA Policy
+    description: How we handle copyright infringement notices.
+    file: /documents/LymeFiber-DMCA-Policy-.pdf
+    category: Policies
+    updated: 2021-08-01
+  - title: E911 Legal Disclaimer
+    description: Important limits of 911 service over internet phone lines.
+    file: /documents/E911-Legal-Disclaimer-1.pdf
+    category: Phone
+    updated: 2021-08-01
+  - title: Power Outages and Phone Service
+    description: What happens to your phone line when the power goes out.
+    file: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf
+    category: Phone
+    updated: 2021-08-01
+  - title: Telephone Service User's Guide
+    description: Voicemail, calling features and how to use them.
+    file: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf
+    category: Phone
+    updated: 2022-01-26
+  - title: Phone Letter of Agency
+    description: Authorizes us to move (port) your existing phone number to LymeFiber.
+    file: /documents/Phone-LOA.pdf
+    category: Customer Forms
+    updated: 2020-11-01
+  - title: Installation Letter of Permission
+    description: Permission for LymeFiber to install equipment on your property.
+    file: /documents/Installation-Letter-Of-Permission.pdf
+    category: Customer Forms
+    updated: 2021-08-01
+  - title: Contractor List and Underground Specifications
+    description: Specifications for underground conduit and contractors who have done the work.
+    file: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf
+    category: Customer Forms
+    updated: 2021-05-01

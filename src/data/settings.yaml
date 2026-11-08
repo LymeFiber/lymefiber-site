@@ -1,0 +1,12 @@
+# Contact details and outside links. Pages use these as {{tokens}},
+# e.g. {{support_phone}}. Change a value here and every page updates.
+support_phone: 603-795-0915
+tollfree_phone: 833-795-5300
+support_email: support@notices.lymefiber.net
+transition_email: transition@lymefiber.net
+postal_address: P.O. Box 323, South Royalton, VT 05068
+billing_portal_url: https://account.lymefiber.net
+phone_portal_url: https://portal.gwi.net/
+signup_url: https://order.lymefiber.net
+labels_base_url: https://order.lymefiber.net/broadband-facts/
+copyright_name: LymeFiber LLC
