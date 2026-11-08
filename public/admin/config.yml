@@ -1,0 +1,161 @@
+# Sveltia CMS configuration: https://github.com/sveltia/sveltia-cms
+backend:
+  name: github
+  repo: richb-hanover/lymefiber-site # see HANDOFF.md
+  branch: main
+  # base_url: set to the sveltia-cms-auth Worker URL (see HANDOFF.md)
+
+site_url: https://lymefiber.net
+logo_url: /favicon.svg
+media_folder: public/images
+public_folder: /images
+
+collections:
+  - name: notice
+    label: Site Notice
+    description: The outage banner shown at the top of every page.
+    icon: campaign
+    files:
+      - name: notice
+        label: Outage / notice banner
+        file: src/data/notice.yaml
+        fields:
+          - name: enabled
+            label: Show the banner
+            widget: boolean
+            default: false
+            hint: Turn on to show the banner on every page. Turn off when resolved. Changes appear in about 2 minutes.
+          - name: level
+            label: Type
+            widget: select
+            default: outage
+            options:
+              - { label: "Outage (red)", value: outage }
+              - { label: "Planned maintenance (red)", value: maintenance }
+              - { label: "General notice (green)", value: info }
+          - name: message
+            label: Message
+            widget: text
+            required: false
+            hint: "Keep it short. Links work like this: [our FAQ](/support/faq/). Contact tokens like {{support_phone}} work too."
+          - name: posted_at
+            label: Posted at
+            widget: datetime
+            default: "{{now}}"
+            required: false
+            hint: Shown on the banner as "Posted Dec 9, 4:10 PM" (Eastern time). Update it when you change the message.
+
+  - name: pages
+    label: Pages
+    label_singular: Page
+    icon: description
+    folder: src/content/pages
+    create: true
+    extension: md
+    format: frontmatter
+    slug: "{{slug}}"
+    summary: "{{title}}  ·  {{permalink}}"
+    sortable_fields: [title, permalink]
+    fields:
+      - { name: title, label: Title, widget: string }
+      - name: description
+        label: Summary for search engines
+        widget: text
+        required: false
+        hint: One or two sentences. Shown in Google results and link previews.
+      - name: permalink
+        label: Web address (URL path)
+        widget: string
+        pattern: ['^\/([a-z0-9]+(-[a-z0-9]+)*\/)*$', 'Use lowercase words and hyphens, with a slash at both ends, like /plans/ or /about/history/']
+        hint: Where the page appears, e.g. /about/history/ becomes lymefiber.net/about/history/. To show it in the menu, add it under Menu.
+      - name: layout
+        label: Layout
+        widget: hidden
+        default: page
+        required: false
+      - name: labels_csv
+        label: Broadband labels CSV
+        widget: hidden
+        required: false
+      - name: body
+        label: Page text
+        widget: markdown
+        hint: "Contact details can be written as tokens such as {{support_phone}}, {{support_email}} or {{billing_portal_url}}. See Site Settings for the full list."
+
+  - name: menu
+    label: Menu
+    icon: menu
+    files:
+      - name: menu
+        label: Main menu
+        file: src/data/menu.yaml
+        fields:
+          - name: items
+            label: Menu sections
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { name: label, label: Section name, widget: string }
+              - name: children
+                label: Links
+                widget: list
+                summary: "{{fields.label}}  →  {{fields.href}}"
+                fields:
+                  - { name: label, label: Link text, widget: string }
+                  - name: href
+                    label: Link to
+                    widget: string
+                    hint: "A page address like /plans/, a document like /documents/Phone-LOA.pdf, or a full web address. Tokens like {{signup_url}} work."
+                  - { name: external, label: Opens another website, widget: boolean, default: false, required: false }
+
+  - name: documents
+    label: Documents
+    icon: picture_as_pdf
+    files:
+      - name: documents
+        label: Policies & Documents
+        file: src/data/documents.yaml
+        fields:
+          - name: documents
+            label: Documents
+            widget: list
+            summary: "{{fields.title}}  ({{fields.category}})"
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Short description, widget: string, required: false }
+              - name: file
+                label: PDF file
+                widget: file
+                media_folder: /public/documents
+                public_folder: /documents
+                hint: To replace a policy, upload the new PDF with the same file name so existing links keep working.
+              - name: category
+                label: Category
+                widget: select
+                options: [Policies, Phone, Customer Forms]
+              - name: updated
+                label: Last updated
+                widget: datetime
+                type: date
+                format: YYYY-MM-DD
+                time_format: false
+
+  - name: settings
+    label: Site Settings
+    icon: settings
+    files:
+      - name: settings
+        label: Contact details and links
+        file: src/data/settings.yaml
+        description: These values are used throughout the site. Pages refer to them as tokens, e.g. {{support_phone}}.
+        fields:
+          - { name: support_phone, label: "Support phone  ·  {{support_phone}}", widget: string }
+          - { name: tollfree_phone, label: "Toll-free phone  ·  {{tollfree_phone}}", widget: string }
+          - { name: support_email, label: "Support email  ·  {{support_email}}", widget: string }
+          - { name: transition_email, label: "Transition questions email  ·  {{transition_email}}", widget: string }
+          - { name: postal_address, label: "Mailing address  ·  {{postal_address}}", widget: string }
+          - { name: billing_portal_url, label: "Billing portal URL  ·  {{billing_portal_url}}", widget: string }
+          - { name: phone_portal_url, label: "Phone portal URL  ·  {{phone_portal_url}}", widget: string }
+          - { name: signup_url, label: "Sign-up / order URL  ·  {{signup_url}}", widget: string }
+          - { name: labels_base_url, label: "Broadband label link prefix  ·  {{labels_base_url}}", widget: string }
+          - { name: copyright_name, label: "Copyright name  ·  {{copyright_name}}", widget: string }
