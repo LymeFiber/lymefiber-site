@@ -15,7 +15,7 @@ This site was built in temporary accounts. Everything account-specific is listed
 
 **Cloudflare:** each person has their own login; successors are invited as members (decided 2026-11-08).
 
-- The account was created by Rich Brown with his own login and his own two-factor authentication. Nobody shares a password.
+- The account was created by the project owner with their own login and their own two-factor authentication. Nobody shares a password.
 - To add someone: **Manage Account → Members → Invite**, with the **Super Administrator** role. They accept from their email and set up their own two-factor.
 - To hand over: invite the successor, confirm they can log in, then they remove the departing person's membership.
 - Keep at least two Super Administrators at all times (for example, a second board member), so the account is never locked to one person who becomes unavailable.
