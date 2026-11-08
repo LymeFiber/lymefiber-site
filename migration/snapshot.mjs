@@ -26,7 +26,7 @@ const oldUrls = new Set(['/', '/feed/']);
 const uploads = new Set();
 
 const collectUploads = (html) => {
-  for (const m of html.matchAll(/https?:\/\/(?:www\.)?lymefiber\.net(\/wp-content\/uploads\/[^"'\s)?#]+)/gi)) {
+  for (const m of html.matchAll(/(?:https?:\/\/(?:www\.)?lymefiber\.net)?(\/wp-content\/uploads\/[^"'\s)?#\\]+)/gi)) {
     uploads.add(m[1]);
   }
 };

@@ -65,12 +65,12 @@
 /wp-content/uploads/2021/05/LymeFiber-Contractor-List-and-UG-Specs-.pdf
 /wp-content/uploads/2021/08/E911-Legal-Disclaimer-1.pdf
 /wp-content/uploads/2021/08/Installation-Letter-Of-Permission.pdf
+/wp-content/uploads/2021/08/Lymefiber-DCMA-Policy-232x300.jpg
 /wp-content/uploads/2021/08/LymeFiber-DMCA-Policy-.pdf
 /wp-content/uploads/2021/08/LymeFiber-Letter-Of-Permission-Photo-232x300.png
 /wp-content/uploads/2021/08/LymeFiber-Phone-LOA-Photo-231x300.jpg
 /wp-content/uploads/2021/08/LymeFiber-Subscriber-Agreement-Photo-230x300.png
 /wp-content/uploads/2021/08/LymeFibers-E-911-Legal-Disclaimer-Photo-e1629738736788-234x300.jpg
-/wp-content/uploads/2021/08/Lymefiber-DCMA-Policy-232x300.jpg
 /wp-content/uploads/2021/08/Phone-LOA.pdf
 /wp-content/uploads/2021/08/Power-Outages-and-LymeFiber-Phone-Service-Photo-231x300.jpg
 /wp-content/uploads/2021/08/Power-Outages-and-LymeFiber-Phone-Service.pdf
@@ -81,9 +81,11 @@
 /wp-content/uploads/2021/12/Screenshot-2021-12-30-144837-230x300.png
 /wp-content/uploads/2022/01/LymeFiber-Acceptable-Use-Policy-Image-1-1-232x300.png
 /wp-content/uploads/2022/01/LymeFiber-Acceptable-Use-Policy.pdf
+/wp-content/uploads/2022/01/lymefiber-open-internet-policy--264x300.png
 /wp-content/uploads/2022/01/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf
 /wp-content/uploads/2022/01/LymeFiber-Privacy-Policy-01_01_2022.pdf
 /wp-content/uploads/2022/01/LymeFiber-Privacy-Policy-Image--234x300.png
-/wp-content/uploads/2022/01/lymefiber-open-internet-policy--264x300.png
 /wp-content/uploads/2024/10/Lymefiber-Broadband-Facts-Labels-customer-docs-page-231x300.jpg
+/wp-content/uploads/2025/05/button-sign-up-now-250w.png
+/wp-content/uploads/2025/05/nid-225x300-1.jpg
 /wp-content/uploads/2026/03/broadband-facts-labels-2026-03-20-5-51-PM.csv
