@@ -1,0 +1,74 @@
+---
+import wordmark from '../assets/wordmark.svg?raw';
+import { getMenu, getSettings } from '../lib/data';
+import { replaceTokens } from '../lib/tokens';
+
+const settings = getSettings();
+const resolve = (href = '#') => replaceTokens(href, settings).text;
+const menu = getMenu();
+const { permalink = '' } = Astro.props as { permalink?: string };
+const isCurrent = (href?: string) => href === permalink;
+const sectionActive = (children: { href?: string }[] = []) => children.some((c) => c.href && permalink.startsWith(c.href) && c.href !== '/');
+---
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="wordmark" href="/" set:html={wordmark} />
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Main">
+      <ul class="site-nav__list">
+        {menu.map((item) => (
+          <li class:list={['site-nav__item', { 'is-active': sectionActive(item.children) }]}>
+            {item.children ? (
+              <details class="site-nav__section">
+                <summary>{item.label}</summary>
+                <ul class="site-nav__sub">
+                  {item.children.map((c) => (
+                    <li>
+                      {c.external ? (
+                        <a href={resolve(c.href)} rel="noopener" target="_blank">
+                          {c.label} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens external site)</span>
+                        </a>
+                      ) : (
+                        <a href={c.href} aria-current={isCurrent(c.href) ? 'page' : undefined}>{c.label}</a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            ) : (
+              <a href={resolve(item.href)}>{item.label}</a>
+            )}
+          </li>
+        ))}
+      </ul>
+      <a class="button signup" href={settings.signup_url}>Sign Up</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.getElementById('site-nav');
+  const sections = [...document.querySelectorAll<HTMLDetailsElement>('.site-nav__section')];
+  const desktop = window.matchMedia('(min-width: 860px)');
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    nav?.classList.toggle('is-open', open);
+  });
+
+  // On desktop, only one dropdown open at a time; close on outside click or Escape.
+  sections.forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open && desktop.matches) sections.forEach((o) => { if (o !== d) o.open = false; });
+  }));
+  document.addEventListener('click', (e) => {
+    if (desktop.matches && !(e.target as Element).closest('.site-nav__section')) sections.forEach((d) => (d.open = false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const openSection = sections.find((d) => d.open);
+    if (openSection) { openSection.open = false; openSection.querySelector('summary')?.focus(); return; }
+    if (toggle?.getAttribute('aria-expanded') === 'true') { toggle.click(); toggle.focus(); }
+  });
+</script>

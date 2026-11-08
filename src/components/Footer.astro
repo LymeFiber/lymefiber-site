@@ -1,0 +1,43 @@
+---
+import wordmark from '../assets/wordmark-reverse.svg?raw';
+import { getSettings } from '../lib/data';
+const s = getSettings();
+const tel = (n: string) => `tel:${n.replace(/[^0-9+]/g, '')}`;
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <a class="wordmark wordmark--reverse" href="/" set:html={wordmark} />
+      <p>Community-owned fiber internet for Lyme, Orford &amp; Hanover.</p>
+    </div>
+    <div>
+      <h2>Contact</h2>
+      <ul>
+        <li><a href={tel(s.support_phone)}>{s.support_phone}</a></li>
+        <li>Toll free: <a href={tel(s.tollfree_phone)}>{s.tollfree_phone}</a></li>
+        <li><a href={`mailto:${s.support_email}`}>{s.support_email}</a></li>
+        <li>{s.postal_address}</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Resources</h2>
+      <ul>
+        <li><a href="/support/faq/">FAQ</a></li>
+        <li><a href="/connect/installation/">Installation &amp; Scheduling</a></li>
+        <li><a href="/documents/">Policies &amp; Documents</a></li>
+        <li><a href="/support/contact/">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <h2>Policies</h2>
+      <ul>
+        <li><a href="/documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf">Subscriber Agreement</a></li>
+        <li><a href="/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf">Privacy Policy</a></li>
+        <li><a href="/documents/LymeFiber-Acceptable-Use-Policy.pdf">Acceptable Use Policy</a></li>
+        <li><a href="/terms/">Website Terms of Use</a></li>
+      </ul>
+    </div>
+  </div>
+  <p class="site-footer__copy">© {year} {s.copyright_name}</p>
+</footer>
