@@ -13,11 +13,12 @@ This site was built in temporary accounts. Everything account-specific is listed
 
 ## Who has access, and how it passes on
 
-**Cloudflare:** one shared login owned by the organization (decided 2026-11-08).
+**Cloudflare:** each person has their own login; successors are invited as members (decided 2026-11-08).
 
-- Login email: `richard.e.brown@lymefiber.net`
-- The password and the two-factor codes are kept in a shared password manager or with LymeFiber's records, never in this repository.
-- To hand over: give the successor the password-manager entry (password + two-factor codes + backup codes). Optionally, they can also be invited as a Super Administrator member under **Manage Account → Members** so they have their own login.
-- Caution: the login email is on the lymefiber.net domain. When the domain's DNS moves into Cloudflare, copy the email (MX) records exactly, or this login's email could stop working. Keep the two-factor backup codes somewhere separate as a fallback.
+- The account was created by Rich Brown with his own login and his own two-factor authentication. Nobody shares a password.
+- To add someone: **Manage Account → Members → Invite**, with the **Super Administrator** role. They accept from their email and set up their own two-factor.
+- To hand over: invite the successor, confirm they can log in, then they remove the departing person's membership.
+- Keep at least two Super Administrators at all times (for example, a second board member), so the account is never locked to one person who becomes unavailable.
+- If a login email is on the lymefiber.net domain: when the domain's DNS moves into Cloudflare, copy the email (MX) records exactly, or that login's email could stop working. Each person should keep their own two-factor backup codes.
 
 **GitHub:** editors use their own GitHub accounts, added as collaborators on the repository. Day-to-day editing (outage notices, pages, PDFs) only needs GitHub access, not Cloudflare.
