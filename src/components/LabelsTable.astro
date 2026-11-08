@@ -1,0 +1,24 @@
+---
+import { existsSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { parseLabelsCsv } from '../lib/labels-csv';
+
+interface Props { csvPath: string }
+const { csvPath } = Astro.props;
+const file = join(process.cwd(), 'public', csvPath);
+const table = existsSync(file) ? parseLabelsCsv(readFileSync(file, 'utf8')) : null;
+if (!table) console.warn(`[labels] CSV not found: ${csvPath}`);
+const label = (c: string) => c.replace(/_/g, ' ');
+---
+{table && (
+  <section class="labels-table">
+    <h2>Machine-readable labels</h2>
+    <p>The same information as the labels above, in the FCC's machine-readable format. <a href={csvPath} download>Download the CSV file</a>.</p>
+    <div class="table-scroll">
+      <table>
+        <thead><tr>{table.columns.map((c) => <th scope="col">{label(c)}</th>)}</tr></thead>
+        <tbody>{table.rows.map((r) => <tr>{table.columns.map((c) => <td>{r[c]}</td>)}</tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+)}

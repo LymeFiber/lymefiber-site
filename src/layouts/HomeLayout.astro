@@ -1,0 +1,27 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { getSettings } from '../lib/data';
+
+interface Props { title: string; description: string; permalink: string }
+const { title, description, permalink } = Astro.props;
+const { signup_url } = getSettings();
+const cards = [
+  { title: 'Plans & Pricing', text: 'Internet from $72 a month. Phone lines from $25.', href: '/plans/' },
+  { title: 'Getting Connected', text: 'Sign-up, installation, scheduling and exterior conduit.', href: '/connect/installation/' },
+  { title: 'Customer Support', text: 'FAQ, billing portal and how to reach us.', href: '/support/' },
+];
+---
+<BaseLayout title={title} description={description} permalink={permalink} bodyClass="home">
+  <section class="hero">
+    <h1>{title}</h1>
+    <p>{description}</p>
+    <a class="button" href={signup_url}>Sign Up</a>
+    <a class="button button--outline" href="/plans/">See Plans</a>
+  </section>
+  <div class="cards">
+    {cards.map((c) => (
+      <a class="card" href={c.href}><h2>{c.title}</h2><p>{c.text}</p></a>
+    ))}
+  </div>
+  <div class="page"><slot /></div>
+</BaseLayout>

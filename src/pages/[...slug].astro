@@ -1,0 +1,47 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeLayout from '../layouts/HomeLayout.astro';
+import LabelsTable from '../components/LabelsTable.astro';
+import { getSettings } from '../lib/data';
+import { replaceTokensInHtml, warnUnknown } from '../lib/tokens';
+import { breadcrumbsFor } from '../lib/breadcrumbs';
+
+export async function getStaticPaths() {
+  const pages = (await getCollection('pages')).sort((a, b) => a.id.localeCompare(b.id));
+  const seen = new Map<string, string>();
+  const titles = Object.fromEntries(pages.map((p) => [p.data.permalink, p.data.title]));
+  return pages.flatMap((page) => {
+    const { permalink } = page.data;
+    if (seen.has(permalink)) {
+      console.warn(`[pages] ${page.id} uses ${permalink}, already used by ${seen.get(permalink)}; skipping`);
+      return [];
+    }
+    seen.set(permalink, page.id);
+    const slug = permalink === '/' ? undefined : permalink.slice(1, -1);
+    return [{ params: { slug }, props: { page, titles } }];
+  });
+}
+
+interface Props { page: CollectionEntry<'pages'>; titles: Record<string, string> }
+const { page, titles } = Astro.props;
+const { title, description, permalink, layout, labels_csv } = page.data;
+
+const { text, unknown } = replaceTokensInHtml(page.rendered?.html ?? '', getSettings());
+warnUnknown(unknown, page.id);
+const body = text.replace(/<table/g, '<div class="table-scroll"><table').replace(/<\/table>/g, '</table></div>');
+const crumbs = breadcrumbsFor(permalink, (p) => titles[p]);
+---
+{layout === 'home' ? (
+  <HomeLayout title={title} description={description} permalink={permalink}>
+    <Fragment set:html={body} />
+  </HomeLayout>
+) : (
+  <BaseLayout title={title} description={description} permalink={permalink} breadcrumbs={crumbs}>
+    <article class="page">
+      <h1>{title}</h1>
+      <Fragment set:html={body} />
+      {labels_csv && <LabelsTable csvPath={labels_csv} />}
+    </article>
+  </BaseLayout>
+)}

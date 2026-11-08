@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentList from '../components/DocumentList.astro';
+---
+<BaseLayout
+  title="Policies & Documents"
+  description="LymeFiber policies, phone service documents and customer forms (PDF)."
+  permalink="/documents/"
+  breadcrumbs={[{ label: 'Home', href: '/' }, { label: 'Policies & Documents', href: '/documents/' }]}
+>
+  <article class="page">
+    <h1>Policies &amp; Documents</h1>
+    <p>All documents open as PDF files.</p>
+    <DocumentList />
+  </article>
+</BaseLayout>

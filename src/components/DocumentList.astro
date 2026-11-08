@@ -1,0 +1,38 @@
+---
+import { existsSync, statSync } from 'node:fs';
+import { join } from 'node:path';
+import { getDocuments } from '../lib/data';
+import type { Doc } from '../lib/schemas';
+
+interface Props { docs?: Doc[] }
+const docs = Astro.props.docs ?? getDocuments();
+const CATEGORIES = ['Policies', 'Phone', 'Customer Forms'] as const;
+
+const present = docs.flatMap((d) => {
+  const path = join(process.cwd(), 'public', d.file);
+  if (!existsSync(path)) {
+    console.warn(`[documents] file not found, skipping: ${d.file}`);
+    return [];
+  }
+  return [{ ...d, kb: Math.max(1, Math.round(statSync(path).size / 1024)) }];
+});
+const month = (iso: string) =>
+  new Date(`${iso}T12:00:00Z`).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
+---
+{CATEGORIES.map((cat) => {
+  const items = present.filter((d) => d.category === cat);
+  return items.length > 0 && (
+    <section class="doc-group">
+      <h2>{cat}</h2>
+      <ul class="doc-list">
+        {items.map((d) => (
+          <li>
+            <a href={d.file}>{d.title}</a>
+            {d.description && <p>{d.description}</p>}
+            <span class="doc-meta">PDF · {d.kb} KB · Updated {month(d.updated)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+})}
