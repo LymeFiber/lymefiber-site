@@ -1,6 +1,4 @@
-enabled: true
+enabled: false
 level: outage
-message: |-
-  Hokey Pokey - something's wrong! lorem ipsum dolor Rich Brown 
-  sit amet consectetur adipiscing elit quis in eum eos temporibus est corrupti qui aliquip qui similique nisi sunt nisi corrupti quos consectetur facere quidem officia minim animi libero odio eu aut tempor dolore proident imperdiet et qui distinctio voluptatum voluptate incididunt ut sunt quo pariatur eiusmod commodo
+message: Hokey Pokey - something's wrong!
 posted_at: 2026-11-08T21:35:00
