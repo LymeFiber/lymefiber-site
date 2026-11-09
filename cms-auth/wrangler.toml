@@ -1,0 +1,12 @@
+# GitHub login helper for the site editor (Sveltia CMS).
+# Copied from https://github.com/sveltia/sveltia-cms-auth at commit 7c34594 (MIT licence).
+# Deploy:  npx wrangler@4.158.0 deploy        (from this folder)
+# Secrets: npx wrangler@4.158.0 secret put GITHUB_CLIENT_ID
+#          npx wrangler@4.158.0 secret put GITHUB_CLIENT_SECRET
+name = "lymefiber-cms-auth"
+main = "src/index.js"
+compatibility_date = "2023-03-24"
+
+[vars]
+# Only these sites may use this login helper.
+ALLOWED_DOMAINS = "lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net"
