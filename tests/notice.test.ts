@@ -10,6 +10,10 @@ describe('formatPostedAt', () => {
   test('handles the DST change night', () => {
     expect(formatPostedAt('2026-11-01T06:30:00Z')).toBe('Posted Nov 1, 1:30 AM');
   });
+  test('reads a time without a zone (as the editor saves it) as Eastern time', () => {
+    expect(formatPostedAt('2026-11-08T21:35:00')).toBe('Posted Nov 8, 9:35 PM');
+    expect(formatPostedAt('2026-07-04T09:05')).toBe('Posted Jul 4, 9:05 AM');
+  });
   test.each([undefined, '', 'garbage'])('returns null for %s', (v) => {
     expect(formatPostedAt(v)).toBeNull();
   });
