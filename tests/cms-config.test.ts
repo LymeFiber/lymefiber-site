@@ -55,3 +55,9 @@ test('page images go to public/images', () => {
 test('admin page loads a pinned CMS version', () => {
   expect(readFileSync('public/admin/index.html', 'utf8')).toMatch(/@sveltia\/cms@\d+\.\d+\.\d+\/dist\/sveltia-cms\.js/);
 });
+
+test('page fields the site depends on are visible, not hidden', () => {
+  const fields = col('pages').fields;
+  expect(field(fields, 'layout')).toBeUndefined();
+  expect(field(fields, 'labels_csv')).toMatchObject({ widget: 'string', required: false });
+});

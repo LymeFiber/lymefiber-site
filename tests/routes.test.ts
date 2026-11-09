@@ -9,6 +9,13 @@ describe('built site', () => {
   test('home page is built from the page with permalink "/"', () => {
     expect(read('dist/index.html')).toContain('Fiber Internet for Lyme, Orford &amp; Hanover');
   });
+  test('the page at "/" always gets the home layout, whatever its front matter says', () => {
+    expect(read('dist/index.html')).toContain('class="hero"');
+    expect(read('dist/index.html')).toContain('class="cards"');
+  });
+  test('the labels page still shows the FCC table', () => {
+    expect(read('dist/plans/broadband-labels/index.html')).toContain('Machine-readable labels');
+  });
   test('documents page lists Policies before Phone before Customer Forms', () => {
     const html = read('dist/documents/index.html');
     const i = (s: string) => html.indexOf(`>${s}</h2>`);

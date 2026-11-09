@@ -68,15 +68,11 @@ collections:
         widget: string
         pattern: ['^\/([a-z0-9]+(-[a-z0-9]+)*\/)*$', 'Use lowercase words and hyphens, with a slash at both ends, like /plans/ or /about/history/']
         hint: Where the page appears, e.g. /about/history/ becomes lymefiber.net/about/history/. To show it in the menu, add it under Menu.
-      - name: layout
-        label: Layout
-        widget: hidden
-        default: page
-        required: false
       - name: labels_csv
-        label: Broadband labels CSV
-        widget: hidden
+        label: FCC labels CSV file (Broadband Fact Labels page only)
+        widget: string
         required: false
+        hint: Leave empty on every other page. On the Broadband Fact Labels page it names the labels file, e.g. /documents/broadband-facts-labels-2026-03-20-5-51-PM.csv
       - name: body
         label: Page text
         widget: markdown

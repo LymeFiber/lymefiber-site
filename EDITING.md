@@ -162,7 +162,7 @@ The **Policies & Documents** page lists every PDF. It is built from the **Docume
 
 **To add a new document:** click **Add** under **Documents**, then fill in the title, a short description, the PDF file, a category (Policies, Phone or Customer Forms) and the date.
 
-**The FCC broadband labels file** (`broadband-facts-labels-…csv`) works the same way, but it is referred to from the **Broadband Fact Labels** page rather than from the Documents list. If you upload a new labels file with a different name, ask a technical helper to update that page's settings.
+**The FCC broadband labels file** (`broadband-facts-labels-…csv`) works the same way, but it is referred to from the **Broadband Fact Labels** page rather than from the Documents list. If you upload a new labels file with a different name, open the **Broadband Fact Labels** page in **Pages** and put the new file's address in **FCC labels CSV file**, for example `/documents/broadband-facts-labels-2027-01-15.csv`.
 
 ---
 

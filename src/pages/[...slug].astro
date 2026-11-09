@@ -21,7 +21,9 @@ export async function getStaticPaths() {
 
 interface Props { page: CollectionEntry<'pages'>; titles: Record<string, string> }
 const { page, titles } = Astro.props;
-const { title, description, permalink, layout, labels_csv } = page.data;
+const { title, description, permalink, labels_csv } = page.data;
+// The page at "/" is always the home page, so a CMS save can never change its layout.
+const layout = permalink === '/' ? 'home' : page.data.layout;
 
 const { text, unknown } = replaceTokensInHtml(page.rendered?.html ?? '', getSettings());
 warnUnknown(unknown, page.id);
