@@ -41,6 +41,7 @@ describe('<BaseLayout>', () => {
   });
   test('footer has contact info and policy links', async () => {
     const html = await render();
+    expect(html).toContain('Community-focused fiber internet for Lyme, Orford &amp; Hanover.');
     expect(html).toContain('603-795-0915');
     expect(html).toContain('/documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf');
     expect(html).toContain('/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf');
