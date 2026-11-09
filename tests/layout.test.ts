@@ -2,6 +2,7 @@ import { describe, expect, test } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { breadcrumbsFor } from '../src/lib/breadcrumbs';
 import BaseLayout from '../src/layouts/BaseLayout.astro';
+import Header from '../src/components/Header.astro';
 
 describe('breadcrumbsFor', () => {
   const titles: Record<string, string> = { '/plans/': 'Plans & Pricing', '/plans/broadband-labels/': 'Broadband Fact Labels' };
@@ -73,4 +74,12 @@ describe('<BaseLayout>', () => {
     expect(html).toContain('href="#main"');
     expect(html).toContain('aria-label="LymeFiber"');
   });
+});
+
+test('tokens work in internal menu links too', async () => {
+  const html = await (await AstroContainer.create()).renderToString(Header, {
+    props: { menu: [{ label: 'Help', children: [{ label: 'Order', href: '{{signup_url}}' }] }] },
+  });
+  expect(html).toMatch(/<a href="https:\/\/order\.lymefiber\.net"[^>]*>Order<\/a>/);
+  expect(html).not.toContain('{{');
 });

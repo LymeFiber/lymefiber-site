@@ -1,12 +1,11 @@
 ---
 import wordmark from '../assets/wordmark.svg?raw';
-import { getMenu, getSettings } from '../lib/data';
+import { getMenu, getSettings, type MenuItem } from '../lib/data';
 import { replaceTokens } from '../lib/tokens';
 
 const settings = getSettings();
 const resolve = (href = '#') => replaceTokens(href, settings).text;
-const menu = getMenu();
-const { permalink = '' } = Astro.props as { permalink?: string };
+const { permalink = '', menu = getMenu() } = Astro.props as { permalink?: string; menu?: MenuItem[] };
 const isCurrent = (href?: string) => href === permalink;
 const sectionActive = (children: { href?: string }[] = []) => children.some((c) => c.href && permalink.startsWith(c.href) && c.href !== '/');
 ---
@@ -29,7 +28,7 @@ const sectionActive = (children: { href?: string }[] = []) => children.some((c) 
                           {c.label} <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens external site)</span>
                         </a>
                       ) : (
-                        <a href={c.href} aria-current={isCurrent(c.href) ? 'page' : undefined}>{c.label}</a>
+                        <a href={resolve(c.href)} aria-current={isCurrent(c.href) ? 'page' : undefined}>{c.label}</a>
                       )}
                     </li>
                   ))}
