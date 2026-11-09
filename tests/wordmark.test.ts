@@ -23,6 +23,13 @@ describe.each(['src/assets/wordmark.svg', 'src/assets/wordmark-reverse.svg'])('%
   });
 });
 
+test('favicon shows a green L and a red F', () => {
+  const svg = readFileSync('public/favicon.svg', 'utf8');
+  expect(svg).not.toContain('<text');
+  expect(svg.match(/<path/g)?.length).toBe(2);
+  expect(svg).toMatch(/<path fill="#50792d"[^>]*>\s*<path fill="#ab3d12"/);
+});
+
 test('main wordmark uses the brand colors', () => {
   const svg = readFileSync('src/assets/wordmark.svg', 'utf8');
   expect(svg).toContain('fill="#50792d"');
