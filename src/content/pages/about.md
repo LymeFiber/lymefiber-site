@@ -1,6 +1,6 @@
 ---
 title: About LymeFiber
-description: LymeFiber is a community-owned fiber-optic network built and governed by Lyme residents, now serving Lyme, Orford and Hanover.
+description: LymeFiber is a community-focused fiber-optic network built and governed by Lyme residents, now serving Lyme, Orford and Hanover.
 permalink: /about/
 layout: page
 ---
