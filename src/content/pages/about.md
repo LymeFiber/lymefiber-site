@@ -7,7 +7,7 @@ layout: page
 
 LymeFiber is a community-centered project offering fiber-optic internet service to residences, businesses and public organizations in Lyme, and now in Orford and Hanover. Service ranges from 100 Mbps up to 1 Gbps. Every plan is symmetrical (the same speed up and down) and free of data caps.
 
-The network is owned and governed by the local residents who built it, and who commit to putting our community first. An outside operating partner handles day-to-day operations, support, billing and repairs. Starting in 2027 that partner is WCVT; see [2027 Transition](/about/transition/). Little test
+The network is owned and governed by the local residents who built it, and who commit to putting our community first. An outside operating partner handles day-to-day operations, support, billing and repairs. Starting in 2027 that partner is WCVT; see [2027 Transition](/about/transition/). 
 
 ## Our goals
 
