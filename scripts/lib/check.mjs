@@ -2,6 +2,7 @@
 import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import { resolve } from './redirects.mjs';
+import { selectPages } from '../../src/lib/pages.ts';
 
 const htmlFiles = (dir) =>
   readdirSync(dir, { recursive: true })
@@ -44,4 +45,19 @@ export function findProblems(dist, oldUrls = []) {
     else if (to.startsWith('/') && !exists(dist, to)) problems.push(`old URL ${url} → ${to} does not exist`);
   }
   return problems;
+}
+
+/** Report pages that are not published because another page already uses their address. */
+export function findDuplicatePermalinks(pagesDir) {
+  const pages = readdirSync(pagesDir)
+    .filter((f) => f.endsWith('.md'))
+    .map((f) => {
+      const front = readFileSync(join(pagesDir, f), 'utf8').match(/^---\n([\s\S]*?)\n---/)?.[1] ?? '';
+      const permalink = front.match(/^permalink:\s*["']?([^"'\s]+)["']?\s*$/m)?.[1];
+      return { id: f.replace(/\.md$/, ''), permalink };
+    })
+    .filter((p) => p.permalink);
+  return selectPages(pages).skipped.map(
+    (s) => `page ${s.id}.md uses ${s.permalink}, which belongs to ${s.keptId}.md; it is not published`,
+  );
 }
