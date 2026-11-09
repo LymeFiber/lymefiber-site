@@ -4,12 +4,39 @@ This site was built in temporary accounts. Everything account-specific is listed
 
 ## Account-specific values
 
-| Value | Current (temporary) | Referenced in |
+| Value | Current | Referenced in |
 |---|---|---|
-| GitHub repo | `richb-hanover/lymefiber-site` (private) | `public/admin/config.yml` (`backend.repo`) |
-| Cloudflare Pages project | `lymefiber` → `https://lymefiber.pages.dev` (not yet created) | Cloudflare dashboard; `ALLOWED_DOMAINS` on the auth Worker |
-| CMS auth Worker | not yet deployed | `public/admin/config.yml` (`backend.base_url`) |
-| GitHub OAuth App | not yet created | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` |
+| GitHub repository | `richb-hanover/lymefiber-site` (private) | `public/admin/config.yml` (`backend.repo`); `EDITING.md` links |
+| Cloudflare Pages project | `lymefiber-site` → https://lymefiber-site.pages.dev, production branch `main` | Cloudflare dashboard |
+| Test address | https://test.lymefiber.net (DreamHost DNS: CNAME `test` → `lymefiber-site.pages.dev`) | Pages project → Custom domains |
+| Build settings | Framework Astro, build `npm run build`, output `dist`; variables `NODE_VERSION=26`, `SITE_NOINDEX=1` (until launch) | Pages project → Settings |
+| Editor login helper (Worker) | `lymefiber-cms-auth` → https://lymefiber-cms-auth.richard-e-brown.workers.dev | `public/admin/config.yml` (`backend.base_url`); source in `cms-auth/` |
+| Login helper allowed sites | `lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net` | `cms-auth/wrangler.toml` (`ALLOWED_DOMAINS`) |
+| GitHub OAuth App | "LymeFiber Site Editor", owned by GitHub user `richb-hanover`; callback `…workers.dev/callback` | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (set in Cloudflare dashboard) |
+| Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages", with `lymefiber-site` under Repository access | github.com/settings/installations |
+
+## Launch day (switching lymefiber.net to the new site)
+
+Do this after the WCVT cutover, once managers have approved the test site.
+
+1. **Update Site Settings** in the editor with WCVT's phone numbers, emails, portal and sign-up addresses.
+2. **Let search engines in:** in the Pages project, delete the `SITE_NOINDEX` variable, then redeploy (Deployments → ⋯ → Retry).
+3. **Move lymefiber.net's DNS to Cloudflare** (Cloudflare → Add a domain → `lymefiber.net`, Free plan):
+   - Before changing anything at DreamHost, compare Cloudflare's imported records with DreamHost's DNS page. **Copy every MX, TXT (SPF, DKIM, DMARC) and mail-related record exactly**, or `@lymefiber.net` email will stop.
+   - Then change the nameservers at the domain registrar to the two Cloudflare gives you.
+4. **Attach the domain:** Pages project → Custom domains → add `lymefiber.net` and `www.lymefiber.net`.
+5. **Send www to the bare domain:** Cloudflare → lymefiber.net → Rules → Redirect Rules → `www.lymefiber.net/*` → `https://lymefiber.net/${1}` (301).
+6. **Check:** the home page, an old address such as `/faq/` (should redirect), the editor login at `/admin/`, and an email sent to a `@lymefiber.net` address.
+7. Update the editor address in `EDITING.md` and the OAuth App's Homepage URL to `https://lymefiber.net`.
+8. Optional: remove `test.lymefiber.net` from Custom domains and its CNAME at DreamHost.
+
+## Moving to LymeFiber's own GitHub organization
+
+1. GitHub: repository **Settings → Transfer** to the LymeFiber organization.
+2. Update `backend.repo` in `public/admin/config.yml` and the links in `EDITING.md`.
+3. Transfer the OAuth App to the organization (OAuth App settings → Transfer ownership), or create a new one and update the two Worker secrets.
+4. In Cloudflare, reconnect the Pages project to the moved repository (the GitHub app must have access to it).
+5. Re-invite editors as organization members or collaborators.
 
 ## Who has access, and how it passes on
 
