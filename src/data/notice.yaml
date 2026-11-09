@@ -1,4 +1,4 @@
-enabled: true
+enabled: false
 level: outage
 message: |-
   Hokey Pokey - something's wrong!
