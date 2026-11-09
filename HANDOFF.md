@@ -1,19 +1,19 @@
 # Hand-off notes
 
-This site was built in temporary accounts. Everything account-specific is listed here so it can move to LymeFiber's own accounts.
+Everything account-specific is listed here so the site can be handed on.
 
 ## Account-specific values
 
 | Value | Current | Referenced in |
 |---|---|---|
-| GitHub repository | `richb-hanover/lymefiber-site` (private) | `public/admin/config.yml` (`backend.repo`); `EDITING.md` links |
+| GitHub repository | `LymeFiber/lymefiber-site` (public; moved from `richb-hanover/lymefiber-site` on 2026-11-09) | `public/admin/config.yml` (`backend.repo`); `EDITING.md` links |
 | Cloudflare Pages project | `lymefiber-site` → https://lymefiber-site.pages.dev, production branch `main` | Cloudflare dashboard |
 | Test address | https://test.lymefiber.net (DreamHost DNS: CNAME `test` → `lymefiber-site.pages.dev`) | Pages project → Custom domains |
 | Build settings | Framework Astro, build `npm run build`, output `dist`; variables `NODE_VERSION=26`, `SITE_NOINDEX=1` (until launch) | Pages project → Settings |
 | Editor login helper (Worker) | `lymefiber-cms-auth` → https://lymefiber-cms-auth.richard-e-brown.workers.dev | `public/admin/config.yml` (`backend.base_url`); source in `cms-auth/` |
 | Login helper allowed sites | `lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net` | `cms-auth/wrangler.toml` (`ALLOWED_DOMAINS`) |
 | GitHub OAuth App | "LymeFiber Site Editor", owned by GitHub user `richb-hanover`; callback `…workers.dev/callback` | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (set in Cloudflare dashboard) |
-| Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages", with `lymefiber-site` under Repository access | github.com/settings/installations |
+| Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages" installed on the **LymeFiber** organization, with `lymefiber-site` under Repository access | github.com/organizations/LymeFiber/settings/installations |
 
 ## Launch day (switching lymefiber.net to the new site)
 

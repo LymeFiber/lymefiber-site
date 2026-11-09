@@ -8,8 +8,8 @@ const col = (name: string) => cfg.collections.find((c: any) => c.name === name);
 const fileFields = (name: string) => col(name).files[0].fields;
 const field = (fields: any[], name: string) => fields.find((f: any) => f.name === name);
 
-test('backend commits straight to main on the temporary repo', () => {
-  expect(cfg.backend).toMatchObject({ name: 'github', repo: 'richb-hanover/lymefiber-site', branch: 'main' });
+test('backend commits straight to main on the LymeFiber repo', () => {
+  expect(cfg.backend).toMatchObject({ name: 'github', repo: 'LymeFiber/lymefiber-site', branch: 'main' });
   expect(cfg.publish_mode).not.toBe('editorial_workflow');
 });
 

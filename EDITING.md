@@ -170,7 +170,7 @@ The **Policies & Documents** page lists every PDF. It is built from the **Docume
 
 Editors need a free GitHub account (https://github.com/signup).
 
-1. A repository owner goes to https://github.com/richb-hanover/lymefiber-site, then **Settings → Collaborators → Add people**.
+1. A repository owner goes to https://github.com/LymeFiber/lymefiber-site, then **Settings → Collaborators → Add people**.
 2. Enter the new editor's GitHub username or email and send the invitation.
 3. The new editor accepts the invitation from their email or from GitHub. They can then log in to the editor.
 
@@ -184,7 +184,7 @@ To remove an editor, go to the same **Collaborators** page and click **Remove** 
 
 **To see what a page used to say:**
 
-1. Go to https://github.com/richb-hanover/lymefiber-site/commits/main. Every save is listed with its time and a description such as *Update Page "faq"*.
+1. Go to https://github.com/LymeFiber/lymefiber-site/commits/main. Every save is listed with its time and a description such as *Update Page "faq"*.
 2. Click a save to see exactly what changed: removed text in red, added text in green.
 3. Copy the old text back into the editor and save.
 
@@ -194,7 +194,7 @@ For bigger problems, a technical helper can restore any earlier version of the w
 
 ## Who to ask
 
-- **Something on the site looks wrong after a save:** wait 2–3 minutes and reload. If it's still wrong, open the [save history](https://github.com/richb-hanover/lymefiber-site/commits/main) and click the ✓ or ✗ icon next to your save:
+- **Something on the site looks wrong after a save:** wait 2–3 minutes and reload. If it's still wrong, open the [save history](https://github.com/LymeFiber/lymefiber-site/commits/main) and click the ✓ or ✗ icon next to your save:
   - **Cloudflare Pages** ✗ means the site couldn't be rebuilt, so your change isn't live. Ask a technical helper.
   - **check** ✗ means the site was published, but the automatic check found something to tidy, such as a broken link or a misspelled token. It's not urgent; a technical helper can look at the details.
 - **Accounts, hosting and the domain:** see `HANDOFF.md`.
