@@ -3,7 +3,7 @@ backend:
   name: github
   repo: richb-hanover/lymefiber-site # see HANDOFF.md
   branch: main
-  # base_url: set to the sveltia-cms-auth Worker URL (see HANDOFF.md)
+  base_url: https://lymefiber-cms-auth.richard-e-brown.workers.dev # login helper, see cms-auth/ and HANDOFF.md
 
 site_url: https://lymefiber.net
 logo_url: /favicon.svg
