@@ -19,6 +19,8 @@ const { title, description = '', permalink, notice, breadcrumbs = [], bodyClass 
 const site = Astro.site ?? new URL('https://lymefiber.net');
 const canonical = new URL(permalink, site).href;
 const ogImage = new URL('/og-image.png', site).href;
+// Set SITE_NOINDEX=1 in Cloudflare until launch so the test site stays out of search results.
+const noindex = process.env.SITE_NOINDEX === '1';
 const fullTitle = permalink === '/' ? `LymeFiber | ${title}` : `${title} | LymeFiber`;
 ---
 <!doctype html>
@@ -28,6 +30,7 @@ const fullTitle = permalink === '/' ? `LymeFiber | ${title}` : `${title} | LymeF
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonical} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="preload" href="/fonts/SortsMillGoudy-Regular.woff2" as="font" type="font/woff2" crossorigin />

@@ -58,6 +58,15 @@ describe('<BaseLayout>', () => {
     const html = await render({ notice: { enabled: true, level: 'outage', message: 'Down' } });
     expect(html).toMatch(/<body[^>]*>\s*<a[^>]*class="skip-link"[^>]*>[^<]*<\/a>\s*<div class="notice/);
   });
+  test('adds noindex only when SITE_NOINDEX is set', async () => {
+    expect(await render()).not.toContain('name="robots"');
+    process.env.SITE_NOINDEX = '1';
+    try {
+      expect(await render()).toContain('<meta name="robots" content="noindex, nofollow"');
+    } finally {
+      delete process.env.SITE_NOINDEX;
+    }
+  });
   test('has a skip link and the wordmark', async () => {
     const html = await render();
     expect(html).toContain('href="#main"');
