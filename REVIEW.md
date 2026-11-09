@@ -112,7 +112,7 @@ None of these affects normal use. Tell me which, if any, you'd like done.
 - `Support@LymeFiber.net`, written twice in the Website Terms of Use. It isn't on the guide's list of things to update by hand at the cutover.
 
 ### Leftovers and housekeeping
-- The test message "Hokey Pokey - something's wrong!" is still saved in the Site Notice. The banner is off; clear the message before launch.
+- ~~The test message "Hokey Pokey - something's wrong!" is still saved in the Site Notice.~~ **Done 2026-11-09:** message cleared.
 - `HANDOFF.md`'s "Moving to LymeFiber's own GitHub organization" section is half done. The repository has moved; the GitHub login app and the login helper are still on personal accounts.
 - One pattern in the notice code contains an invisible special space character, which is confusing to anyone reading the code.
 - The editor script is loaded without a tamper check (SRI hash).
