@@ -9,5 +9,33 @@
   </head>
   <body>
     <script src="https://unpkg.com/@sveltia/cms@0.252.0/dist/sveltia-cms.js"></script>
+    <style>
+      #save-reminder {
+        position: fixed; top: 64px; right: 16px; z-index: 100000;
+        max-width: min(360px, calc(100vw - 32px));
+        padding: 12px 16px; border-radius: 8px;
+        background: #1b7f3b; color: #fff; font: 500 15px/1.4 system-ui, sans-serif;
+        box-shadow: 0 4px 16px rgb(0 0 0 / 0.25);
+        transition: opacity 0.3s;
+      }
+      #save-reminder[hidden] { display: block; opacity: 0; pointer-events: none; }
+    </style>
+    <div id="save-reminder" role="status" aria-live="polite" hidden></div>
+    <script>
+      // After every save, remind editors that the live site takes a few minutes to rebuild.
+      (() => {
+        const box = document.getElementById('save-reminder');
+        let timer;
+        CMS.registerEventListener({
+          name: 'postSave',
+          handler: () => {
+            box.textContent = 'Changes will take about three minutes to appear on the site.';
+            box.hidden = false;
+            clearTimeout(timer); // one save can fire several events; show a single 10-second reminder
+            timer = setTimeout(() => { box.hidden = true; }, 10000);
+          },
+        });
+      })();
+    </script>
   </body>
 </html>
