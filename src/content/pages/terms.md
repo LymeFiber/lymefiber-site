@@ -85,7 +85,7 @@ We may, but have no obligation to, monitor, edit or remove content that we deter
 You agree that your comments will not violate any right of any third-party, including copyright, trademark, privacy, personality or other personal or proprietary right. You further agree that your comments will not contain libelous or otherwise unlawful, abusive or obscene material, or contain any computer virus or other malware that could in any way affect the operation of the Service or any related website. You may not use a false e-mail address, pretend to be someone other than yourself, or otherwise mislead us or third-parties as to the origin of any comments. You are solely responsible for any comments you make and their accuracy. We take no responsibility and assume no liability for any comments posted by you or any third-party.
 
 ## Section 10 – Personal Information
-Your submission of personal information through the store is governed by our [Privacy Policy](/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf). 
+Your submission of personal information through the store is governed by our [Privacy Policy](/documents/LymeFiber-Privacy-Policy.pdf). 
 
 ## Section 11 – Errors, Inaccuracies And Omissions
 Occasionally there may be information on our site or in the Service that contains typographical errors, inaccuracies or omissions that may relate to product descriptions, pricing, promotions, offers, product shipping charges, transit times and availability. We reserve the right to correct any errors, inaccuracies or omissions, and to change or update information or cancel orders if any information in the Service or on any related website is inaccurate at any time without prior notice (including after you have submitted your order).

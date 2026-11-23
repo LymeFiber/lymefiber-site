@@ -24,7 +24,7 @@ Installation includes mounting a small box called an NID (Network Interface Devi
 
 **Wi-Fi router:** A router lets you connect multiple wired and wireless devices. In some areas you need to have or buy your own wireless router, and our technicians will connect it during installation. In other areas the router is built into the LymeFiber equipment. Ask the person who calls to schedule your installation whether you need your own.
 
-**Battery backup:** Installers connect a battery backup for your phone service so you can still make calls during a power outage. LymeFiber can supply larger batteries at extra cost, or you can add your own emergency power. **The LymeFiber battery does not power your router or telephone set.** To keep them working during an outage, buy an uninterruptible power supply (UPS) from any electronics store. See also [Power Outages and Phone Service](/documents/Power-Outages-and-LymeFiber-Phone-Service.pdf).
+**Battery backup:** Installers connect a battery backup for your phone service so you can still make calls during a power outage. LymeFiber can supply larger batteries at extra cost, or you can add your own emergency power. **The LymeFiber battery does not power your router or telephone set.** To keep them working during an outage, buy an uninterruptible power supply (UPS) from any electronics store. See also [Power Outages and Phone Service](/documents/LymeFiber-Power-Outages-and-Phone-Service.pdf).
 
 ## 3. Internet service
 
@@ -36,7 +36,7 @@ Phone service includes unlimited local and long-distance calling and several cal
 
 ## 5. Keeping your phone number
 
-Please **do not** cancel your current phone service. We'll handle disconnecting your old line while we transfer your number. You'll need to complete a [Letter of Agency](/documents/Phone-LOA.pdf). Your account with your old provider must be current and in good standing, and the transfer takes 10 days or more.
+Please **do not** cancel your current phone service. We'll handle disconnecting your old line while we transfer your number. You'll need to complete a [Letter of Agency](/documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf). Your account with your old provider must be current and in good standing, and the transfer takes 10 days or more.
 
 If you need to change the date or time of a scheduled phone transfer visit, tell us **at least 48 hours ahead**. Without that notice, your number may not switch over properly: you could lose the ability to receive calls on the scheduled day and to place calls the following day.
 

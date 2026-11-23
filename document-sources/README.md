@@ -27,3 +27,5 @@ Give each Word file the same name as the PDF it produces, e.g.
 If you can modify/push to the Github repo,
 edit the documents locally, save their PDFs,
 and push the entire repo.
+Then update the links manually through the editor,
+if necessary.

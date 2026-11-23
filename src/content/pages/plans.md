@@ -55,7 +55,7 @@ See the [Broadband Fact Labels](/plans/broadband-labels/) for the full details o
 
 LymeFiber phone service includes unlimited local and long-distance calling and several calling features. Voicemail, with the option to receive messages as email attachments, is included in the monthly charge.
 
-**Keeping your phone number:** Please *do not* cancel your current phone service. We'll handle disconnecting your old line while we transfer your number. If you choose phone service, you'll receive a [Letter of Agency](/documents/Phone-LOA.pdf) to complete and return. Your account with your old provider must be current and in good standing, and the transfer can take 10 days or more. Telephone user guides are emailed once your lines have been transferred.
+**Keeping your phone number:** Please *do not* cancel your current phone service. We'll handle disconnecting your old line while we transfer your number. If you choose phone service, you'll receive a [Letter of Agency](/documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf) to complete and return. Your account with your old provider must be current and in good standing, and the transfer can take 10 days or more. Telephone user guides are emailed once your lines have been transferred.
 
 ## Other services
 

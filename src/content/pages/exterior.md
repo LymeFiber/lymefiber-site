@@ -31,7 +31,7 @@ You can speed up bringing fiber to your home or business. For drops more than 40
 
 ## Conduit installation and contractors
 
-If you need conduit or a pull string installed to your home/business, the following contractors have expressed an interest in performing underground work. LymeFiber is providing this list as a convenience to premises owners. It is not a list of “recommended contractors” and so LymeFiber makes no representation about the capability, quality or pricing of these contractors. It is the building owner’s responsibility to ensure all work is performed in accordance with our specifications. You can download the list along with our underground specifications [here](/documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf).
+If you need conduit or a pull string installed to your home/business, the following contractors have expressed an interest in performing underground work. LymeFiber is providing this list as a convenience to premises owners. It is not a list of “recommended contractors” and so LymeFiber makes no representation about the capability, quality or pricing of these contractors. It is the building owner’s responsibility to ensure all work is performed in accordance with our specifications. You can download the list along with our underground specifications [here](/documents/LymeFiber-Contractor-List-and-UG-Specs.pdf).
 
 ## Underground connections through existing conduit
 

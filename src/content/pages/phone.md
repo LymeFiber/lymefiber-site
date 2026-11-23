@@ -30,11 +30,11 @@ If you've completed all three steps, your activation date has passed, and you're
 
 ## Good to know
 
-**Keeping your number.** A new phone number can be set up within 48 hours. Transferring your existing number takes up to 10 days. **Do not** disconnect your current number before the transfer date. We'll tell you when the transfer is complete so you can make sure your former phone company stops billing you. You'll need to complete a [Letter of Agency](/documents/Phone-LOA.pdf).
+**Keeping your number.** A new phone number can be set up within 48 hours. Transferring your existing number takes up to 10 days. **Do not** disconnect your current number before the transfer date. We'll tell you when the transfer is complete so you can make sure your former phone company stops billing you. You'll need to complete a [Letter of Agency](/documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf).
 
 **Phone jacks.** Jacks throughout the house won't work unless the fiber terminal (ONT) is connected to your house wiring. Wiring other jacks is billable, can affect call quality, and can cause outages if a power surge travels into the ONT through the phone lines.
 
-**Battery backup.** The battery keeps your phone line working for about 8 hours if the power goes out. It does not power cordless phones or their bases, so keep a phone that doesn't need wall power for outages, just as with a landline. See [Power Outages and Phone Service](/documents/Power-Outages-and-LymeFiber-Phone-Service.pdf) and the [E911 Disclaimer](/documents/E911-Legal-Disclaimer-1.pdf).
+**Battery backup.** The battery keeps your phone line working for about 8 hours if the power goes out. It does not power cordless phones or their bases, so keep a phone that doesn't need wall power for outages, just as with a landline. See [Power Outages and Phone Service](/documents/LymeFiber-Power-Outages-and-Phone-Service.pdf) and the [E911 Disclaimer](/documents/LymeFiber-E911-Legal-Disclaimer.pdf).
 
 **Home security systems** can work with digital phone service. Check with your security company.
 
@@ -44,4 +44,4 @@ If you've completed all three steps, your activation date has passed, and you're
 
 ## Get phone service
 
-Already a LymeFiber internet customer, or signing up now? [Sign up for phone service]({{signup_url}}). For help using voicemail and calling features, see the [Telephone User Guide](/documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf).
+Already a LymeFiber internet customer, or signing up now? [Sign up for phone service]({{signup_url}}). For help using voicemail and calling features, see the [Telephone User Guide](/documents/LymeFiber-Telephone-Service-User-Guide.pdf).

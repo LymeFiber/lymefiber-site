@@ -9,14 +9,14 @@ These Broadband Facts labels give clear, accurate information about the cost, sp
 
 ## Residential plans
 
-- [Residential Basic]({{labels_base_url}}F0029062494R0100MB20250716)
-- [Residential Standard]({{labels_base_url}}F0029062494R0300MB20250716)
-- [Residential Wicked]({{labels_base_url}}F0029062494R1000MB20250717)
-- [Residential Rural Wicked]({{labels_base_url}}F0029062494OZUA1PBHD1PLQSC)
+- [Residential Basic](/documents/LymeFiber-Residential%20Basic.pdf)
+- [Residential Standard](/documents/LymeFiber-Residential%20Standard.pdf)
+- [Residential Wicked](/documents/LymeFiber-Residential%20Wicked.pdf)
+- [Residential Rural Wicked](/documents/LymeFiber-Residential%20Rural%20Wicked.pdf)
 
 ## Business plans
 
-- [Business Basic]({{labels_base_url}}F0029062494B0100MB20250716)
-- [Business Standard]({{labels_base_url}}F0029062494B0300MB20250716)
-- [Business Ultra]({{labels_base_url}}F0029062494B0500MB20250716)
-- [Business Wicked]({{labels_base_url}}F0029062494B1000MB20250716)
+- [Business Basic](/documents/LymeFiber-Business%20Basic.pdf)
+- [Business Standard](/documents/LymeFiber-Business%20Standard.pdf)
+- [Business Ultra](/documents/LymeFiber-Business%20Ultra.pdf)
+- [Business Wicked](/documents/LymeFiber-Business%20Wicked.pdf)

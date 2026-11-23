@@ -12,13 +12,13 @@ If you haven't received your login yet, or have any questions, call [{{tollfree_
 
 ## Phone service settings
 
-Manage voicemail and calling features in the [Phone Portal]({{phone_portal_url}}). See the [Telephone User Guide](/documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf) for help.
+Manage voicemail and calling features in the [Phone Portal]({{phone_portal_url}}). See the [Telephone User Guide](/documents/LymeFiber-Telephone-Service-User-Guide.pdf) for help.
 
 ## Answers to common questions
 
 - [Frequently Asked Questions](/support/faq/)
 - [System Upgrade FAQ](/support/system-upgrade/)
-- [Power Outages and Phone Service](/documents/Power-Outages-and-LymeFiber-Phone-Service.pdf)
+- [Power Outages and Phone Service](/documents/LymeFiber-Power-Outages-and-Phone-Service.pdf)
 - [Broadband Fact Labels](/plans/broadband-labels/): clear information about the cost and features of each plan
 
 ## Contact us

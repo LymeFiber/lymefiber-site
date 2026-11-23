@@ -89,7 +89,6 @@ Phone numbers, email addresses, the mailing address and outside links are stored
 | `{{billing_portal_url}}` | Billing portal web address |
 | `{{phone_portal_url}}` | Phone portal web address |
 | `{{signup_url}}` | Sign-up / order web address |
-| `{{labels_base_url}}` | Start of each FCC broadband label web address |
 | `{{copyright_name}}` | Name in the copyright line |
 
 Examples in page text:

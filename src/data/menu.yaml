@@ -8,14 +8,14 @@ items:
       - { label: Sign Up, href: "{{signup_url}}", external: true }
       - { label: Installation & Scheduling, href: /connect/installation/ }
       - { label: Exterior Connection, href: /connect/exterior/ }
-      - { label: Contractor List & Specs, href: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf }
+      - { label: Contractor List & Specs, href: /documents/LymeFiber-Contractor-List-and-UG-Specs.pdf }
   - label: Phone Service
     children:
       - { label: VoIP Phone Service, href: /phone/ }
-      - { label: Telephone User Guide, href: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf }
-      - { label: Power Outages & Phone Service, href: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf }
-      - { label: E911 Disclaimer, href: /documents/E911-Legal-Disclaimer-1.pdf }
-      - { label: Phone Letter of Agency, href: /documents/Phone-LOA.pdf }
+      - { label: Telephone User Guide, href: /documents/LymeFiber-Telephone-Service-User-Guide.pdf }
+      - { label: Power Outages & Phone Service, href: /documents/LymeFiber-Power-Outages-and-Phone-Service.pdf }
+      - { label: E911 Disclaimer, href: /documents/LymeFiber-E911-Legal-Disclaimer.pdf }
+      - { label: Phone Letter of Agency, href: /documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf }
   - label: Support
     children:
       - { label: Support Home, href: /support/ }

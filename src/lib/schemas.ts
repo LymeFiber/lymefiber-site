@@ -5,7 +5,7 @@ export const PERMALINK_PATTERN = /^\/([a-z0-9]+(-[a-z0-9]+)*\/)*$/;
 
 export const SETTINGS_KEYS = [
   'support_phone', 'tollfree_phone', 'support_email', 'transition_email', 'postal_address',
-  'billing_portal_url', 'phone_portal_url', 'signup_url', 'labels_base_url', 'copyright_name',
+  'billing_portal_url', 'phone_portal_url', 'signup_url', 'copyright_name',
 ] as const;
 
 export const settingsSchema = z.object(

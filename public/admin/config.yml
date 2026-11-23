@@ -153,5 +153,4 @@ collections:
           - { name: billing_portal_url, label: "Billing portal URL  ·  {{billing_portal_url}}", widget: string }
           - { name: phone_portal_url, label: "Phone portal URL  ·  {{phone_portal_url}}", widget: string }
           - { name: signup_url, label: "Sign-up / order URL  ·  {{signup_url}}", widget: string }
-          - { name: labels_base_url, label: "Broadband label link prefix  ·  {{labels_base_url}}", widget: string }
           - { name: copyright_name, label: "Copyright name  ·  {{copyright_name}}", widget: string }
