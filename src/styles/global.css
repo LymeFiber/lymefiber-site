@@ -17,6 +17,7 @@
 
 :root {
   --red: #ab3d12;
+  --yellow: #f2c230;
   --green-dark: #004f3e;
   --green: #50792d;
   --green-tint: #eef3e8;
@@ -89,8 +90,10 @@ img { max-width: 100%; height: auto; }
 /* Outage notice */
 .notice { background: var(--red); color: #fff; font-size: 0.95rem; }
 .notice--info { background: var(--green-dark); }
+.notice--maintenance { background: var(--yellow); color: var(--text); }
 .notice__inner { max-width: var(--wide); margin: 0 auto; padding: 0.6rem 1rem; display: flex; flex-wrap: wrap; gap: 0.25rem 0.6rem; align-items: baseline; }
 .notice a { color: #fff; font-weight: 600; }
+.notice--maintenance a { color: var(--text); }
 .notice__time { margin-left: auto; opacity: 0.9; font-size: 0.85rem; }
 
 /* Header */

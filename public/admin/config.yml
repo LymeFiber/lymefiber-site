@@ -31,7 +31,7 @@ collections:
             default: outage
             options:
               - { label: "Outage (red)", value: outage }
-              - { label: "Planned maintenance (red)", value: maintenance }
+              - { label: "Planned maintenance (yellow)", value: maintenance }
               - { label: "General notice (green)", value: info }
           - name: message
             label: Message
