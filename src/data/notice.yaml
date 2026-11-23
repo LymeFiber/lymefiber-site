@@ -1,3 +1,4 @@
-enabled: false
+enabled: true
 level: outage
-message: ""
+message: This is a test. If it were a real emergency, I have no idea what to do
+posted_at: 2026-11-23T07:45:00
