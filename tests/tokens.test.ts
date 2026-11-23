@@ -8,10 +8,10 @@ const md = async (src: string) => (await (await createSatteriMarkdownProcessor({
 
 describe('replaceTokens', () => {
   test('replaces a known token', () => {
-    expect(replaceTokens('Call {{support_phone}}', s)).toEqual({ text: 'Call 603-795-0915', unknown: [] });
+    expect(replaceTokens('Call {{support_phone}}', s)).toEqual({ text: `Call ${s.support_phone}`, unknown: [] });
   });
   test('allows spaces inside the braces', () => {
-    expect(replaceTokens('{{ support_phone }}', s).text).toBe('603-795-0915');
+    expect(replaceTokens('{{ support_phone }}', s).text).toBe(s.support_phone);
   });
   test('leaves an unknown token in place and reports it', () => {
     expect(replaceTokens('Call {{supprt_phone}}', s)).toEqual({ text: 'Call {{supprt_phone}}', unknown: ['supprt_phone'] });
@@ -21,11 +21,11 @@ describe('replaceTokens', () => {
 describe('replaceTokensInHtml (rendered Markdown)', () => {
   test('fills a token used as a link target', async () => {
     const { text } = replaceTokensInHtml(await md('[Pay]({{billing_portal_url}})'), s);
-    expect(text).toContain('<a href="https://account.lymefiber.net">Pay</a>');
+    expect(text).toContain(`<a href="${s.billing_portal_url}">Pay</a>`);
   });
   test('fills a token inside a tel: link', async () => {
     const { text } = replaceTokensInHtml(await md('[Call](tel:{{support_phone}})'), s);
-    expect(text).toContain('href="tel:603-795-0915"');
+    expect(text).toContain(`href="tel:${s.support_phone}"`);
   });
   test('escapes values for HTML', () => {
     const { text } = replaceTokensInHtml('<p>{{copyright_name}}</p>', { ...s, copyright_name: 'A & B <x>' });

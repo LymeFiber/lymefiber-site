@@ -1,56 +1,57 @@
 import { describe, expect, test } from 'vitest';
 import { getSettings, getMenu, getNotice, getDocuments, PERMALINK_PATTERN } from '../src/lib/data';
+import { SETTINGS_KEYS } from '../src/lib/schemas';
+
+// These tests check that the editable data is *valid*, not what it says.
+// Editors change phone numbers, menus, notices and documents through the CMS;
+// those edits must never make the tests fail.
 
 describe('settings', () => {
-  test('has the launch values for all ten keys', () => {
-    expect(getSettings()).toEqual({
-      support_phone: '603-795-0915',
-      tollfree_phone: '833-795-5300',
-      support_email: 'support@notices.lymefiber.net',
-      transition_email: 'transition@lymefiber.net',
-      postal_address: 'P.O. Box 323, South Royalton, VT 05068',
-      billing_portal_url: 'https://account.lymefiber.net',
-      phone_portal_url: 'https://portal.gwi.net/',
-      signup_url: 'https://order.lymefiber.net',
-      labels_base_url: 'https://order.lymefiber.net/broadband-facts/',
-      copyright_name: 'LymeFiber LLC',
-    });
+  test('has every key, each filled in', () => {
+    const s = getSettings();
+    expect(Object.keys(s).sort()).toEqual([...SETTINGS_KEYS].sort());
+    for (const k of SETTINGS_KEYS) expect(s[k].trim(), k).not.toBe('');
+  });
+  test('emails look like emails and links look like links', () => {
+    const s = getSettings();
+    for (const k of SETTINGS_KEYS.filter((k) => k.endsWith('_email'))) expect(s[k], k).toMatch(/^[^@\s]+@[^@\s]+\.[a-z]+$/i);
+    for (const k of SETTINGS_KEYS.filter((k) => k.endsWith('_url'))) expect(s[k], k).toMatch(/^https?:\/\/\S+$/);
   });
 });
 
 describe('menu', () => {
-  test('has the five top-level sections in order', () => {
-    expect(getMenu().map((m) => m.label)).toEqual([
-      'Plans & Pricing', 'Get Connected', 'Phone Service', 'Support', 'About',
-    ]);
+  test('has sections, and every link has a label and an address', () => {
+    const menu = getMenu();
+    expect(menu.length).toBeGreaterThan(0);
+    for (const m of menu) {
+      expect(m.label.trim()).not.toBe('');
+      for (const c of m.children ?? []) {
+        expect(c.label.trim()).not.toBe('');
+        expect(c.href?.trim(), c.label).toBeTruthy();
+      }
+    }
   });
-  test('children match the spec', () => {
-    const kids = Object.fromEntries(getMenu().map((m) => [m.label, m.children!.map((c) => c.label)]));
-    expect(kids['Plans & Pricing']).toEqual(['Service Plans & Pricing', 'Broadband Fact Labels']);
-    expect(kids['Get Connected']).toEqual(['Sign Up', 'Installation & Scheduling', 'Exterior Connection', 'Contractor List & Specs']);
-    expect(kids['Phone Service']).toEqual(['VoIP Phone Service', 'Telephone User Guide', 'Power Outages & Phone Service', 'E911 Disclaimer', 'Phone Letter of Agency']);
-    expect(kids['Support']).toEqual(['Support Home', 'FAQ', 'System Upgrade FAQ', 'Contact Us', 'Billing Portal', 'Phone Portal']);
-    expect(kids['About']).toEqual(['About LymeFiber', '2027 Transition', 'Expanding to Orford & Hanover', 'Policies & Documents']);
-  });
-  test('portal and sign-up links are external tokens', () => {
-    const all = getMenu().flatMap((m) => m.children ?? []);
-    expect(all.find((c) => c.label === 'Sign Up')).toMatchObject({ href: '{{signup_url}}', external: true });
-    expect(all.find((c) => c.label === 'Billing Portal')).toMatchObject({ href: '{{billing_portal_url}}', external: true });
+  test('any {{token}} in a menu link is a real setting', () => {
+    const hrefs = getMenu().flatMap((m) => [m.href, ...(m.children ?? []).map((c) => c.href)]).filter(Boolean) as string[];
+    for (const h of hrefs)
+      for (const [, k] of h.matchAll(/\{\{\s*(\w+)\s*\}\}/g)) expect(SETTINGS_KEYS as readonly string[], h).toContain(k);
   });
 });
 
 describe('notice', () => {
-  test('starts switched off', () => {
-    expect(getNotice().enabled).toBe(false);
+  test('is valid, and has a message whenever it is switched on', () => {
+    const n = getNotice();
+    expect(typeof n.enabled).toBe('boolean');
+    if (n.enabled) expect(n.message.trim()).not.toBe('');
   });
 });
 
 describe('documents', () => {
-  test('lists the eleven kept files', () => {
+  test('every entry is a PDF in a known category', () => {
     const docs = getDocuments();
-    expect(docs).toHaveLength(11);
+    expect(docs.length).toBeGreaterThan(0);
     expect(docs.every((d) => d.file.startsWith('/documents/') && d.file.endsWith('.pdf'))).toBe(true);
-    expect(new Set(docs.map((d) => d.category))).toEqual(new Set(['Policies', 'Phone', 'Customer Forms']));
+    for (const d of docs) expect(['Policies', 'Phone', 'Customer Forms']).toContain(d.category);
   });
 });
 

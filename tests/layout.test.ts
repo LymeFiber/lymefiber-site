@@ -3,6 +3,10 @@ import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { breadcrumbsFor } from '../src/lib/breadcrumbs';
 import BaseLayout from '../src/layouts/BaseLayout.astro';
 import Header from '../src/components/Header.astro';
+import { getMenu, getSettings } from '../src/lib/data';
+
+const s = getSettings();
+const esc = (t: string) => t.replace(/&/g, '&amp;');
 
 describe('breadcrumbsFor', () => {
   const titles: Record<string, string> = { '/plans/': 'Plans & Pricing', '/plans/broadband-labels/': 'Broadband Fact Labels' };
@@ -30,20 +34,21 @@ describe('<BaseLayout>', () => {
       slots: { default: '<p>body</p>' },
     });
 
-  test('header has the five sections and a Sign Up button', async () => {
+  test('header shows every menu section and a Sign Up button', async () => {
     const html = await render();
-    for (const l of ['Plans &amp; Pricing', 'Get Connected', 'Phone Service', 'Support', 'About']) expect(html).toContain(l);
-    expect(html).toMatch(/<a[^>]*class="[^"]*signup[^"]*"[^>]*href="https:\/\/order\.lymefiber\.net"|href="https:\/\/order\.lymefiber\.net"[^>]*class="[^"]*signup/);
+    for (const m of getMenu()) expect(html).toContain(esc(m.label));
+    expect(html).toMatch(/<a[^>]*class="[^"]*signup[^"]*"[^>]*href="[^"]+"/);
+    expect(html).toContain(`href="${s.signup_url}"`);
   });
   test('external links are marked', async () => {
     const html = await render();
-    expect(html).toMatch(/href="https:\/\/account\.lymefiber\.net"[^>]*rel="noopener"/);
+    expect(html).toMatch(/href="https?:[^"]*"[^>]*rel="noopener"/);
     expect(html).toContain('(opens external site)');
   });
   test('footer has contact info and policy links', async () => {
     const html = await render();
     expect(html).toContain('Community-focused fiber internet for Lyme, Orford &amp; Hanover.');
-    expect(html).toContain('603-795-0915');
+    expect(html).toContain(s.support_phone);
     expect(html).toContain('/documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf');
     expect(html).toContain('/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf');
     expect(html).toContain('/documents/LymeFiber-Acceptable-Use-Policy.pdf');
@@ -80,6 +85,6 @@ test('tokens work in internal menu links too', async () => {
   const html = await (await AstroContainer.create()).renderToString(Header, {
     props: { menu: [{ label: 'Help', children: [{ label: 'Order', href: '{{signup_url}}' }] }] },
   });
-  expect(html).toMatch(/<a href="https:\/\/order\.lymefiber\.net"[^>]*>Order<\/a>/);
+  expect(html).toContain(`<a href="${s.signup_url}"`);
   expect(html).not.toContain('{{');
 });
