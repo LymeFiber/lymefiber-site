@@ -49,3 +49,12 @@ Do this after the WCVT cutover, once managers have approved the test site.
 - If a login email is on the lymefiber.net domain: when the domain's DNS moves into Cloudflare, copy the email (MX) records exactly, or that login's email could stop working. Each person should keep their own two-factor backup codes.
 
 **GitHub:** editors use their own GitHub accounts, added as collaborators on the repository. Day-to-day editing (outage notices, pages, PDFs) only needs GitHub access, not Cloudflare.
+
+## Change log
+
+### 2026-11-23
+
+- **Broadband labels are now local PDFs.** The Broadband Fact Labels page links to `/documents/LymeFiber-<Plan name>.pdf` (e.g. `LymeFiber-Residential Basic.pdf`) instead of `order.lymefiber.net/broadband-facts/…`. When a label changes, upload a replacement PDF with the same name. The `labels_base_url` setting was removed (settings file, schema, editor and `EDITING.md`).
+- **Links to renamed documents fixed.** The new policy PDFs added earlier today dropped the old dates and suffixes from their names, and the originals moved to `public/documents/OLD/`. Links in pages, the menu and the Documents list now point at the current files: Contractor List, Telephone User Guide, Phone Letter of Agency, Power Outages and Phone Service, E911 Disclaimer and Privacy Policy.
+- **The site no longer links to the old WordPress site.** The only `lymefiber.net` addresses left are the sign-up (`order.lymefiber.net`) and billing (`account.lymefiber.net`) systems in Site Settings, `@lymefiber.net` email addresses, and the site's own future address.
+- **Planned-maintenance banner is yellow** (dark text). Outage stays red and General notice stays green.
