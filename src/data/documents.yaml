@@ -6,9 +6,9 @@ documents:
     updated: 2026-11-23
   - title: Privacy Policy
     description: What information we collect and how we use it.
-    file: /documents/LymeFiber-Privacy-Policy-01_01_2022.pdf
+    file: /documents/LymeFiber-Privacy-Policy.pdf
     category: Policies
-    updated: 2022-01-01
+    updated: 2026-11-23
   - title: Acceptable Use Policy
     description: Rules for using the LymeFiber network.
     file: /documents/LymeFiber-Acceptable-Use-Policy.pdf
@@ -16,14 +16,14 @@ documents:
     updated: 2026-11-23
   - title: Open Internet Transparency Policy
     description: How LymeFiber manages its network and what that means for your service.
-    file: /documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf
+    file: /documents/LymeFiber-Open-Internet-Transparency-Policy.pdf
     category: Policies
-    updated: 2022-01-01
+    updated: 2026-11-23
   - title: DMCA Policy
     description: How we handle copyright infringement notices.
-    file: /documents/LymeFiber-DMCA-Policy-.pdf
+    file: /documents/LymeFiber-DMCA-Policy.pdf
     category: Policies
-    updated: 2021-08-01
+    updated: 2026-11-23
   - title: E911 Legal Disclaimer
     description: Important limits of 911 service over internet phone lines.
     file: /documents/LymeFiber-E911-Legal-Disclaimer.pdf
@@ -48,9 +48,9 @@ documents:
     description: Permission for LymeFiber to install equipment on your property.
     file: /documents/LymeFiber-Installation-Letter-of-Permission.pdf
     category: Customer Forms
-    updated: 2021-08-01
+    updated: 2026-11-23
   - title: Contractor List and Underground Specifications
     description: Specifications for underground conduit and contractors who have done the work.
-    file: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf
+    file: /documents/LymeFiber-Contractor-List-and-UG-Specs.pdf
     category: Customer Forms
-    updated: 2021-05-01
+    updated: 2026-11-23
