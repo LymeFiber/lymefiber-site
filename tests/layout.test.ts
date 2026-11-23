@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import { breadcrumbsFor } from '../src/lib/breadcrumbs';
@@ -49,9 +50,10 @@ describe('<BaseLayout>', () => {
     const html = await render();
     expect(html).toContain('Community-focused fiber internet for Lyme, Orford &amp; Hanover.');
     expect(html).toContain(s.support_phone);
-    expect(html).toContain('/documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf');
-    expect(html).toContain('/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf');
-    expect(html).toContain('/documents/LymeFiber-Acceptable-Use-Policy.pdf');
+    // Policy links come from the documents list; only PDFs that exist are linked.
+    const footer = html.slice(html.indexOf('<footer'));
+    const links = [...footer.matchAll(/href="(\/documents\/[^"]+\.pdf)"/g)].map((m) => m[1]);
+    for (const l of links) expect(existsSync(`public${decodeURI(l)}`), l).toBe(true);
     expect(html).toContain('href="/terms/"');
   });
   test('head has title, description, canonical and og:image', async () => {

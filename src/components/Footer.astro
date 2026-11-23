@@ -1,7 +1,19 @@
 ---
 import wordmark from '../assets/wordmark-reverse.svg?raw';
-import { getSettings } from '../lib/data';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+import { getDocuments, getSettings } from '../lib/data';
 const s = getSettings();
+// Policy links come from the Documents list in the site editor, matched by title.
+// A link is left out if that document is missing or its PDF hasn't been uploaded.
+const policies = [
+  ['Subscriber Agreement', /subscriber agreement/i],
+  ['Privacy Policy', /privacy policy/i],
+  ['Acceptable Use Policy', /acceptable use/i],
+].flatMap(([label, re]) => {
+  const d = getDocuments().find((d) => (re as RegExp).test(d.title));
+  return d && existsSync(join(process.cwd(), 'public', d.file)) ? [{ label: label as string, href: d.file }] : [];
+});
 const tel = (n: string) => `tel:${n.replace(/[^0-9+]/g, '')}`;
 const year = new Date().getFullYear();
 ---
@@ -32,9 +44,7 @@ const year = new Date().getFullYear();
     <div>
       <h2>Policies</h2>
       <ul>
-        <li><a href="/documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf">Subscriber Agreement</a></li>
-        <li><a href="/documents/LymeFiber-Privacy-Policy-01_01_2022.pdf">Privacy Policy</a></li>
-        <li><a href="/documents/LymeFiber-Acceptable-Use-Policy.pdf">Acceptable Use Policy</a></li>
+        {policies.map((p) => <li><a href={p.href}>{p.label}</a></li>)}
         <li><a href="/terms/">Website Terms of Use</a></li>
       </ul>
     </div>

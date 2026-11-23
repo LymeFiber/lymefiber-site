@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import { describe, expect, test } from 'vitest';
 import { experimental_AstroContainer as AstroContainer } from 'astro/container';
 import DocumentList from '../src/components/DocumentList.astro';
@@ -46,10 +46,11 @@ describe('built site', () => {
 
 describe('<DocumentList>', () => {
   test('omits entries whose file does not exist', async () => {
+    const real = `/documents/${readdirSync('public/documents').find((f) => f.endsWith('.pdf'))}`;
     const html = await (await AstroContainer.create()).renderToString(DocumentList, {
       props: {
         docs: [
-          { title: 'Real', description: '', file: '/documents/Phone-LOA.pdf', category: 'Customer Forms', updated: '2020-11-01' },
+          { title: 'Real', description: '', file: real, category: 'Customer Forms', updated: '2020-11-01' },
           { title: 'Ghost', description: '', file: '/documents/nope.pdf', category: 'Policies', updated: '2020-01-01' },
         ],
       },

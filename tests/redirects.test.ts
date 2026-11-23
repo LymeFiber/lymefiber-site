@@ -13,10 +13,9 @@ describe('resolve', () => {
     ['/faq/', '/support/faq/'],
     ['/faq', '/support/faq/'],
     ['/2020/11/25/lymefiber-update-november-2020/', '/'],
-    ['/wp-content/uploads/2021/08/Phone-LOA.pdf', '/documents/Phone-LOA.pdf'],
-    ['/wp-content/uploads/2020/11/Phone-LOA.pdf', '/documents/Phone-LOA.pdf'],
+    ['/wp-content/uploads/2021/08/Phone-LOA.pdf', '/documents/'],
     ['/signupforlymefiberservices/', 'https://order.lymefiber.net'],
-    ['/lymefiber-dmca-policy/', '/documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf'],
+    ['/lymefiber-dmca-policy/', '/documents/'],
     ['/wp-content/uploads/2021/08/Lymefiber-DCMA-Policy-232x300.jpg', '/documents/'],
   ])('%s → %s', (from, to) => {
     expect(resolve(from, txt)).toBe(to);

@@ -29,31 +29,18 @@ redirects:
   - { from: /customer-documents/, to: /documents/ }
   - { from: /policies-and-procedures/, to: /documents/ }
   - { from: /terms-of-service/, to: /terms/ }
-  - { from: /privacy-policy/, to: /documents/LymeFiber-Privacy-Policy-01_01_2022.pdf }
-  - { from: /lymefiber-subscriber-agreement-2/, to: /documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf }
-  - { from: /lymefiber-acceptable-use-policy/, to: /documents/LymeFiber-Acceptable-Use-Policy.pdf }
-  - { from: /lymefiber-dmca-policy/, to: /documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf }
-  - { from: /lymefiber-e911-legal-disclaimer/, to: /documents/E911-Legal-Disclaimer-1.pdf }
-  - { from: /power-outages-and-phone-service/, to: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf }
-  - { from: /telephone-user-guide/, to: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf }
-  - { from: /phone-letter-of-agency/, to: /documents/Phone-LOA.pdf }
-  - { from: /phone-letter-of-agency-loa/, to: /documents/Phone-LOA.pdf }
-  - { from: /installation-letter-of-permission-2/, to: /documents/Installation-Letter-Of-Permission.pdf }
-  - { from: /underground-specs-and-contractor-list/, to: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf }
+  - { from: /privacy-policy/, to: /documents/ }
+  - { from: /lymefiber-subscriber-agreement-2/, to: /documents/ }
+  - { from: /lymefiber-acceptable-use-policy/, to: /documents/ }
+  - { from: /lymefiber-dmca-policy/, to: /documents/ }
+  - { from: /lymefiber-e911-legal-disclaimer/, to: /documents/ }
+  - { from: /power-outages-and-phone-service/, to: /documents/ }
+  - { from: /telephone-user-guide/, to: /documents/ }
+  - { from: /phone-letter-of-agency/, to: /documents/ }
+  - { from: /phone-letter-of-agency-loa/, to: /documents/ }
+  - { from: /installation-letter-of-permission-2/, to: /documents/ }
+  - { from: /underground-specs-and-contractor-list/, to: /documents/ }
   # Uploaded files
-  - { from: /wp-content/uploads/2020/11/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf, to: /documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf }
-  - { from: /wp-content/uploads/2020/11/Phone-LOA.pdf, to: /documents/Phone-LOA.pdf }
-  - { from: /wp-content/uploads/2021/08/Phone-LOA.pdf, to: /documents/Phone-LOA.pdf }
-  - { from: /wp-content/uploads/2021/11/Phone-LOA.pdf, to: /documents/Phone-LOA.pdf }
-  - { from: /wp-content/uploads/2021/05/LymeFiber-Contractor-List-and-UG-Specs-.pdf, to: /documents/LymeFiber-Contractor-List-and-UG-Specs-.pdf }
-  - { from: /wp-content/uploads/2021/08/E911-Legal-Disclaimer-1.pdf, to: /documents/E911-Legal-Disclaimer-1.pdf }
-  - { from: /wp-content/uploads/2021/08/Installation-Letter-Of-Permission.pdf, to: /documents/Installation-Letter-Of-Permission.pdf }
-  - { from: /wp-content/uploads/2021/08/LymeFiber-DMCA-Policy-.pdf, to: /documents/LymeFiber-DMCA-Policy-.pdf }
-  - { from: /wp-content/uploads/2021/08/Power-Outages-and-LymeFiber-Phone-Service.pdf, to: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf }
-  - { from: /wp-content/uploads/2021/12/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf, to: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf }
-  - { from: /wp-content/uploads/2022/01/LymeFiber-Acceptable-Use-Policy.pdf, to: /documents/LymeFiber-Acceptable-Use-Policy.pdf }
-  - { from: /wp-content/uploads/2022/01/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf, to: /documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf }
-  - { from: /wp-content/uploads/2022/01/LymeFiber-Privacy-Policy-01_01_2022.pdf, to: /documents/LymeFiber-Privacy-Policy-01_01_2022.pdf }
   - { from: /wp-content/uploads/2026/03/broadband-facts-labels-2026-03-20-5-51-PM.csv, to: /documents/broadband-facts-labels-2026-03-20-5-51-PM.csv }
   # Anything else that was uploaded (old images and thumbnails)
   - { from: /wp-content/uploads/*, to: /documents/ }
