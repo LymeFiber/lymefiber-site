@@ -3,7 +3,7 @@ documents:
     description: The agreement between LymeFiber and each subscriber.
     file: /documents/LymeFiber-Subscriber-Agreement-and-Terms.pdf
     category: Policies
-    updated: 2022-01-01
+    updated: 2026-11-23
   - title: Privacy Policy
     description: What information we collect and how we use it.
     file: /documents/LymeFiber-Privacy-Policy-01_01_2022.pdf
@@ -13,7 +13,7 @@ documents:
     description: Rules for using the LymeFiber network.
     file: /documents/LymeFiber-Acceptable-Use-Policy.pdf
     category: Policies
-    updated: 2022-01-01
+    updated: 2026-11-23
   - title: Open Internet Transparency Policy
     description: How LymeFiber manages its network and what that means for your service.
     file: /documents/LymeFiber-Open-Internet-Transparency-Policy-01_01_2022.pdf
@@ -28,22 +28,22 @@ documents:
     description: Important limits of 911 service over internet phone lines.
     file: /documents/LymeFiber-E911-Legal-Disclaimer.pdf
     category: Phone
-    updated: 2021-08-01
+    updated: 2026-11-23
   - title: Power Outages and Phone Service
     description: What happens to your phone line when the power goes out.
-    file: /documents/Power-Outages-and-LymeFiber-Phone-Service.pdf
+    file: /documents/LymeFiber-Power-Outages-and-Phone-Service.pdf
     category: Phone
-    updated: 2021-08-01
+    updated: 2026-11-23
   - title: Telephone Service User's Guide
     description: Voicemail, calling features and how to use them.
     file: /documents/LymeFiber-Telephone-Service-User-Guide.pdf
     category: Phone
-    updated: 2022-01-26
+    updated: 2026-11-23
   - title: Phone Letter of Agency
     description: Authorizes us to move (port) your existing phone number to LymeFiber.
     file: /documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf
     category: Customer Forms
-    updated: 2020-11-01
+    updated: 2026-11-23
   - title: Installation Letter of Permission
     description: Permission for LymeFiber to install equipment on your property.
     file: /documents/LymeFiber-Installation-Letter-of-Permission.pdf
