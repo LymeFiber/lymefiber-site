@@ -1,7 +1,7 @@
 documents:
   - title: Subscriber Agreement and Terms of Service
     description: The agreement between LymeFiber and each subscriber.
-    file: /documents/LymeFiber_Subscriber_Agreement_and_Terms-01_01_2022.pdf
+    file: /documents/LymeFiber-Subscriber-Agreement-and-Terms.pdf
     category: Policies
     updated: 2022-01-01
   - title: Privacy Policy
@@ -26,7 +26,7 @@ documents:
     updated: 2021-08-01
   - title: E911 Legal Disclaimer
     description: Important limits of 911 service over internet phone lines.
-    file: /documents/E911-Legal-Disclaimer-1.pdf
+    file: /documents/LymeFiber-E911-Legal-Disclaimer.pdf
     category: Phone
     updated: 2021-08-01
   - title: Power Outages and Phone Service
@@ -36,17 +36,17 @@ documents:
     updated: 2021-08-01
   - title: Telephone Service User's Guide
     description: Voicemail, calling features and how to use them.
-    file: /documents/LymeFiber-Telephone-Service-Users-Guide-Jan.26.2022.pdf
+    file: /documents/LymeFiber-Telephone-Service-User-Guide.pdf
     category: Phone
     updated: 2022-01-26
   - title: Phone Letter of Agency
     description: Authorizes us to move (port) your existing phone number to LymeFiber.
-    file: /documents/Phone-LOA.pdf
+    file: /documents/LymeFiber-Phone-Letter-of-Agency-(LOA).pdf
     category: Customer Forms
     updated: 2020-11-01
   - title: Installation Letter of Permission
     description: Permission for LymeFiber to install equipment on your property.
-    file: /documents/Installation-Letter-Of-Permission.pdf
+    file: /documents/LymeFiber-Installation-Letter-of-Permission.pdf
     category: Customer Forms
     updated: 2021-08-01
   - title: Contractor List and Underground Specifications
