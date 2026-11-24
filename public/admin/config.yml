@@ -136,6 +136,32 @@ collections:
                 format: YYYY-MM-DD
                 time_format: false
 
+  - name: redirects
+    label: Redirects
+    icon: alt_route
+    description: "Old or mistyped addresses and where to send visitors. Rules are checked top to bottom and the first match wins, so keep specific addresses above ones ending in *. See the Traffic report (button at bottom left) for addresses people are trying."
+    files:
+      - name: redirects
+        label: Redirects
+        file: src/data/redirects.yaml
+        fields:
+          - name: redirects
+            label: Redirects
+            widget: list
+            summary: "{{from}} → {{to}}"
+            fields:
+              - name: from
+                label: Old address
+                widget: string
+                required: true
+                pattern: ['^/', 'Must start with /']
+                hint: "The address people arrive at, starting with /. End it with * to match everything below it, e.g. /2019/*."
+              - name: to
+                label: Send to
+                widget: string
+                required: true
+                hint: "A page on this site (/support/faq/), a full web address, or a contact token like {{signup_url}}."
+
   - name: settings
     label: Site Settings
     icon: settings

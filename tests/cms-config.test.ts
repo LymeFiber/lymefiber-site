@@ -14,8 +14,8 @@ test('backend commits straight to main on the LymeFiber repo', () => {
 });
 
 test('collections appear in the agreed order', () => {
-  expect(cfg.collections.map((c: any) => c.name)).toEqual(['notice', 'pages', 'menu', 'documents', 'settings']);
-  expect(cfg.collections.map((c: any) => c.label)).toEqual(['Site Notice', 'Pages', 'Menu', 'Documents', 'Site Settings']);
+  expect(cfg.collections.map((c: any) => c.name)).toEqual(['notice', 'pages', 'menu', 'documents', 'redirects', 'settings']);
+  expect(cfg.collections.map((c: any) => c.label)).toEqual(['Site Notice', 'Pages', 'Menu', 'Documents', 'Redirects', 'Site Settings']);
 });
 
 describe('Site Notice', () => {
@@ -60,4 +60,19 @@ test('page fields the site depends on are visible, not hidden', () => {
   const fields = col('pages').fields;
   expect(field(fields, 'layout')).toBeUndefined();
   expect(field(fields, 'labels_csv')).toMatchObject({ widget: 'string', required: false });
+});
+
+describe('Redirects', () => {
+  const list = () => field(fileFields('redirects'), 'redirects');
+  test('edits src/data/redirects.yaml', () => {
+    expect(col('redirects').files[0]).toMatchObject({ name: 'redirects', file: 'src/data/redirects.yaml' });
+  });
+  test('is a list of old address → new address', () => {
+    expect(list().widget).toBe('list');
+    expect(field(list().fields, 'from')).toMatchObject({ widget: 'string', required: true, pattern: ['^/', expect.any(String)] });
+    expect(field(list().fields, 'to')).toMatchObject({ widget: 'string', required: true });
+  });
+  test('explains that the first match wins', () => {
+    expect(col('redirects').description).toContain('first match wins');
+  });
 });

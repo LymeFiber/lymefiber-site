@@ -1,5 +1,4 @@
-# Old WordPress addresses → new pages. "to" may use {{tokens}} from settings.yaml.
-# Rules are checked in order; the first match wins. Keep specific rules above wildcards (*).
+# Edited in the site editor under Redirects. First match wins.
 redirects:
   # Plans
   - { from: /service-plans-pricing-2/, to: /plans/ }
