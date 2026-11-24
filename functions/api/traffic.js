@@ -20,5 +20,7 @@ export async function handleReport(context, now = Date.now(), fetchFn = fetch) {
   await pruneOld(db, now);
   const hits = await recentHits(db, now);
   const hosts = [...new Set(hits.map((h) => h.host))].sort();
-  return json(200, { generatedAt: now, hosts, ...summarize(hits) });
+  const host = new URL(context.request.url).searchParams.get('host');
+  const shown = host ? hits.filter((h) => h.host === host) : hits;
+  return json(200, { generatedAt: now, hosts, host: host ?? '', ...summarize(shown) });
 }

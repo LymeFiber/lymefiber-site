@@ -19,8 +19,16 @@
         box-shadow: 0 4px 16px rgb(0 0 0 / 0.25);
         transition: opacity 0.3s;
       }
+      #traffic-link {
+        position: fixed; bottom: 16px; left: 16px; z-index: 100000;
+        padding: 6px 12px; border-radius: 6px;
+        background: #d4f5dc; color: #14532d; border: 1px solid #86d39b;
+        font: 500 14px/1.4 system-ui, sans-serif; text-decoration: none;
+        box-shadow: 0 2px 8px rgb(0 0 0 / 0.2);
+      }
       #save-reminder[hidden] { display: block; opacity: 0; pointer-events: none; }
     </style>
+    <a id="traffic-link" href="/admin/traffic/" title="404s and redirects from the last 7 days">Traffic report</a>
     <div id="save-reminder" role="status" aria-live="polite" hidden></div>
     <script>
       // After every save, remind editors that the live site takes a few minutes to rebuild.

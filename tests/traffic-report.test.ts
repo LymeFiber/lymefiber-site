@@ -127,4 +127,12 @@ describe('GET /api/traffic', () => {
     expect(body.days).toHaveLength(1);
     expect(d.sql[0]).toMatch(/^DELETE/);
   });
+
+  test('?host= limits the summary to one site address but still lists all hosts', async () => {
+    const d = db([hit({ host: 'test.lymefiber.net', path: '/t/' }), hit({ host: 'lymefiber.net', path: '/p/' })]);
+    const r = new Request('https://lymefiber.net/api/traffic?host=lymefiber.net', { headers: { Authorization: 'Bearer d' } });
+    const body = await (await handleReport({ request: r, env: { TRAFFIC_DB: d } } as any, NOW, ghFetch(true))).json();
+    expect(body.hosts).toEqual(['lymefiber.net', 'test.lymefiber.net']);
+    expect(body.notFound.map((x: any) => x.path)).toEqual(['/p/']);
+  });
 });
