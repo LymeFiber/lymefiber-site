@@ -42,3 +42,24 @@ describe('renderRedirects', () => {
     expect(lines.slice(firstSplat).every((l) => l.includes('*'))).toBe(true);
   });
 });
+
+describe('Pages Functions redirect rules', () => {
+  test('Functions and build use the same matcher', async () => {
+    const { resolve: fnResolve } = await import('../functions/_lib/resolve.js');
+    expect(fnResolve).toBe(resolve);
+  });
+
+  test('routes file skips build assets but not documents', () => {
+    const r = JSON.parse(readFileSync('public/_routes.json', 'utf8'));
+    expect(r).toEqual({
+      version: 1,
+      include: ['/*'],
+      exclude: ['/_astro/*', '/fonts/*', '/images/*', '/favicon.svg', '/og-image.png', '/admin/*'],
+    });
+  });
+
+  test('build writes the redirect rules for Functions, identical to dist/_redirects', async () => {
+    const { default: rulesText } = await import('../functions/_lib/rules.generated.js');
+    expect(rulesText).toBe(readFileSync('dist/_redirects', 'utf8'));
+  });
+});

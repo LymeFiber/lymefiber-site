@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>Traffic report · LymeFiber Site Editor</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      :root { color-scheme: light dark; --line: #8884; --muted: #777; --accent: #14532d; --accent-bg: #d4f5dc; }
+      body { font: 15px/1.45 system-ui, sans-serif; margin: 0 auto; padding: 24px 20px 64px; max-width: 1100px; }
+      header { display: flex; flex-wrap: wrap; gap: 12px; align-items: baseline; justify-content: space-between; }
+      h1 { font-size: 22px; margin: 0; }
+      h2 { font-size: 18px; margin: 32px 0 8px; }
+      .actions { display: flex; gap: 8px; }
+      button, .actions a { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid #86d39b; background: var(--accent-bg); color: var(--accent); cursor: pointer; text-decoration: none; }
+      #status, .days, .empty { color: var(--muted); }
+      .controls { margin: 4px 0 8px; }
+      table { border-collapse: collapse; width: 100%; }
+      th, td { text-align: left; padding: 6px 10px 6px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+      th { font-weight: 600; }
+      td.n, th.n { text-align: right; padding-right: 16px; font-variant-numeric: tabular-nums; width: 4em; }
+      td.path { font-family: ui-monospace, monospace; font-size: 13px; word-break: break-all; }
+      td button { padding: 2px 8px; font-size: 13px; white-space: nowrap; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Traffic report: last 7 days</h1>
+      <div class="actions">
+        <button type="button" id="refresh">Refresh</button>
+        <a href="/admin/">Back to editor</a>
+      </div>
+    </header>
+    <p>
+      Addresses people tried that don't exist (404), and old addresses that were redirected to a new page.
+      To fix a 404, add a redirect, add the missing page, or fix the link on the page it came from.
+    </p>
+    <p id="status" role="status" aria-live="polite"></p>
+    <main id="report"></main>
+    <script type="module">
+      import { start } from './report.js';
+      start();
+    </script>
+  </body>
+</html>

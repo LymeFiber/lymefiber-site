@@ -22,12 +22,4 @@ export function renderRedirects(rules, settings) {
   return [...exact, ...splat].join('\n') + '\n';
 }
 
-/** Return where Cloudflare would send `path`, or null if no rule matches. */
-export function resolve(path, redirectsText) {
-  for (const line of redirectsText.split('\n')) {
-    const [from, to] = line.trim().split(/\s+/);
-    if (!from || from.startsWith('#')) continue;
-    if (from.endsWith('*') ? path.startsWith(from.slice(0, -1)) : path === from) return to;
-  }
-  return null;
-}
+export { resolve } from '../../functions/_lib/resolve.js';

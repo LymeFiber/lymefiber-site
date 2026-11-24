@@ -21,3 +21,8 @@ pnpm-debug.log*
 
 # old PDFs kept locally only; anything committed under public/ is published
 public/documents/OLD/
+
+# generated at build time by scripts/gen-redirects.mjs
+functions/_lib/rules.generated.js
+# local Cloudflare dev state (wrangler pages dev)
+.wrangler/
