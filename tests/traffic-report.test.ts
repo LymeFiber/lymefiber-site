@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, test } from 'vitest';
-import { summarize, isEditor, _clearEditorCache } from '../functions/_lib/report.js';
+import { summarize, summarizeSearches, isEditor, _clearEditorCache } from '../functions/_lib/report.js';
 import { onRequestGet, handleReport } from '../functions/api/traffic.js';
 
 const t = (iso: string) => Date.parse(iso);
@@ -47,6 +47,20 @@ describe('summarize', () => {
     expect(s.days).toEqual([
       { day: '2026-11-23', notFound: 1, redirects: 0 },
       { day: '2026-11-24', notFound: 0, redirects: 1 },
+    ]);
+  });
+});
+
+describe('summarizeSearches', () => {
+  test('groups searches regardless of case, most frequent first', () => {
+    const rows = [
+      { ts: t('2026-11-24T10:00:00Z'), host: 'h', query: 'Starlink' },
+      { ts: t('2026-11-24T12:00:00Z'), host: 'h', query: 'starlink' },
+      { ts: t('2026-11-24T11:00:00Z'), host: 'h', query: 'cable tv' },
+    ];
+    expect(summarizeSearches(rows)).toEqual([
+      { query: 'starlink', count: 2, lastSeen: t('2026-11-24T12:00:00Z') },
+      { query: 'cable tv', count: 1, lastSeen: t('2026-11-24T11:00:00Z') },
     ]);
   });
 });
@@ -102,11 +116,11 @@ describe('GET /api/traffic', () => {
 
   const NOW = t('2026-11-24T20:00:00Z');
   const ghFetch = (push: boolean) => async () => new Response(JSON.stringify({ permissions: { push } }), { status: 200 });
-  const db = (rows: any[]) => {
+  const db = (rows: any[], searches: any[] = []) => {
     const sql: string[] = [];
     return {
       sql,
-      prepare: (q: string) => ({ bind: () => ({ run: async () => { sql.push(q); return {}; }, all: async () => { sql.push(q); return { results: rows }; } }) }),
+      prepare: (q: string) => ({ bind: () => ({ run: async () => { sql.push(q); return {}; }, all: async () => { sql.push(q); return { results: q.includes('FROM searches') ? searches : rows }; } }) }),
     };
   };
   beforeEach(() => _clearEditorCache());
@@ -144,5 +158,16 @@ describe('GET /api/traffic', () => {
     const body = await (await handleReport({ request: r, env: { TRAFFIC_DB: d } } as any, NOW, ghFetch(true))).json();
     expect(body.hosts).toEqual(['lymefiber.net', 'test.lymefiber.net']);
     expect(body.notFound.map((x: any) => x.path)).toEqual(['/p/']);
+  });
+
+  test('the report includes searches that found nothing, filtered by site address', async () => {
+    const d = db([], [
+      { ts: NOW - 1000, host: 'lymefiber.net', query: 'starlink' },
+      { ts: NOW - 2000, host: 'test.lymefiber.net', query: 'cable tv' },
+    ]);
+    const r = new Request('https://lymefiber.net/api/traffic?host=lymefiber.net', { headers: { Authorization: 'Bearer e' } });
+    const body = await (await handleReport({ request: r, env: { TRAFFIC_DB: d } } as any, NOW, ghFetch(true))).json();
+    expect(body.searches).toEqual([{ query: 'starlink', count: 1, lastSeen: NOW - 1000 }]);
+    expect(body.hosts).toEqual(['lymefiber.net', 'test.lymefiber.net']);
   });
 });

@@ -51,6 +51,19 @@ export function summarize(hits) {
   };
 }
 
+/** Group searches that found nothing by their text (ignoring case), most frequent first. */
+export function summarizeSearches(rows) {
+  const groups = new Map();
+  for (const r of rows) {
+    const key = r.query.toLowerCase();
+    const g = groups.get(key) ?? { query: key, count: 0, lastSeen: r.ts };
+    g.count++;
+    g.lastSeen = Math.max(g.lastSeen, r.ts);
+    groups.set(key, g);
+  }
+  return [...groups.values()].sort((a, b) => b.count - a.count || a.query.localeCompare(b.query));
+}
+
 const editorCache = new Map(); // token → { ok, until }
 
 /** True if the GitHub token belongs to someone who can push to the site repo (i.e. edit the site). */

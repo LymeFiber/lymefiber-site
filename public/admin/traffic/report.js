@@ -128,10 +128,22 @@ function view(data, state, render, load) {
     hosts = el('p', { class: 'controls' }, el('label', {}, 'Site address: ', select));
   }
 
+  const searches = data.searches ?? [];
+  const srTable = searches.length
+    ? el('table', {},
+        el('thead', {}, el('tr', {}, el('th', { class: 'n' }, 'Count'), el('th', {}, 'Search'), el('th', {}, 'Last seen'))),
+        el('tbody', {}, searches.map((r) => el('tr', {},
+          el('td', { class: 'n' }, String(r.count)),
+          el('td', {}, r.query),
+          el('td', {}, when.format(r.lastSeen)),
+        ))))
+    : el('p', { class: 'empty' }, 'No unanswered searches in the last seven days.');
+
   return [
     days, hosts,
     el('h2', {}, 'Not found (404)'), controls, nfTable,
     el('h2', {}, 'Redirects used'), rdTable,
+    el('h2', {}, 'Searches that found nothing'), srTable,
   ].filter(Boolean);
 }
 
