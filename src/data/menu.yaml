@@ -26,6 +26,6 @@ items:
   - label: About
     children:
       - { label: About LymeFiber, href: /about/ }
-      - { label: 2027 Transition, href: /about/transition/ }
+      - { label: 2026 Transition, href: /about/transition/ }
       - { label: Expanding to Orford & Hanover, href: /about/expansion/ }
       - { label: Policies & Documents, href: /documents/ }
