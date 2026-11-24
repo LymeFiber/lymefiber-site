@@ -149,6 +149,30 @@ img { max-width: 100%; height: auto; }
   .signup { text-align: center; margin: 0.5rem 0; }
 }
 
+/* Site search (header magnifier + panel) */
+.search-toggle { display: none; background: none; border: 0; padding: 0.4rem; border-radius: 6px; color: var(--green-dark); cursor: pointer; line-height: 0; }
+.search-toggle:hover, .search-toggle[aria-expanded='true'] { background: var(--green-tint); }
+.site-search { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 3px solid var(--green); box-shadow: 0 12px 30px rgb(0 0 0 / 0.12); }
+.site-search[hidden] { display: none; }
+.site-search__inner { max-width: var(--wide); margin: 0 auto; padding: 0.9rem 1rem 1rem; }
+.site-search__input { width: 100%; box-sizing: border-box; font: 1.05rem var(--sans); padding: 0.6rem 0.8rem; border: 2px solid var(--green); border-radius: 6px; }
+.site-search__input:focus { outline: 3px solid var(--green-tint); outline-offset: 0; }
+.site-search__status { margin: 0.5rem 0 0; color: var(--muted); font-size: 0.92rem; }
+.site-search__status:empty { display: none; }
+.site-search__results { list-style: none; margin: 0.4rem 0 0; padding: 0; max-height: min(60vh, 32rem); overflow-y: auto; }
+.site-search__results a { display: block; padding: 0.55rem 0.7rem; border-radius: 6px; text-decoration: none; color: var(--text); }
+.site-search__results a:hover, .site-search__results a:focus { background: var(--green-tint); outline: none; }
+.site-search__results strong { display: block; color: var(--green-dark); }
+.site-search__results span { display: block; font-size: 0.92rem; color: var(--muted); }
+.site-search__results mark { background: #fbe7a1; color: inherit; padding: 0 0.1em; border-radius: 2px; }
+@media (min-width: 860px) {
+  .js .search-toggle--desktop { display: block; }
+}
+@media (max-width: 859px) {
+  .js .search-toggle--mobile { display: block; margin-left: auto; }
+  .js .search-toggle--mobile + .menu-toggle { margin-left: 0; }
+}
+
 /* Main content */
 main { display: block; min-height: 50vh; }
 .breadcrumbs { max-width: var(--measure); margin: 1.25rem auto 0; padding: 0 1rem; font-size: 0.9rem; }

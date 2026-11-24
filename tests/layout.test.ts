@@ -90,3 +90,25 @@ test('tokens work in internal menu links too', async () => {
   expect(html).toContain(`<a href="${s.signup_url}"`);
   expect(html).not.toContain('{{');
 });
+
+describe('site search in the header', () => {
+  const render = async () => (await AstroContainer.create()).renderToString(Header, { props: { permalink: '/plans/' } });
+
+  test('has a magnifier button for desktop (inside the menu) and one for phones, both opening the search panel', async () => {
+    const html = await render();
+    const toggles = html.match(/<button[^>]*class="search-toggle[^"]*"[^>]*>/g) ?? [];
+    expect(toggles).toHaveLength(2);
+    for (const t of toggles) {
+      expect(t).toContain('aria-controls="site-search"');
+      expect(t).toContain('aria-expanded="false"');
+      expect(t).toMatch(/aria-label="Search the site"/);
+    }
+    expect(html).toMatch(/<nav[^>]*id="site-nav"[\s\S]*class="search-toggle search-toggle--desktop"[\s\S]*class="button signup"/);
+  });
+
+  test('the search panel starts hidden and has a labelled search box', async () => {
+    const html = await render();
+    expect(html).toMatch(/<div[^>]*id="site-search"[^>]*hidden/);
+    expect(html).toMatch(/<input[^>]*type="search"[^>]*aria-label="Search the site"/);
+  });
+});
