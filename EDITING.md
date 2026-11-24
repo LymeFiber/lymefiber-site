@@ -23,7 +23,7 @@ This guide is for anyone who updates the LymeFiber website: posting an outage no
 
 You need a free GitHub account, and someone must first add you as an editor (see [Adding an editor](#adding-an-editor)).
 
-The left sidebar lists everything you can edit: **Site Notice**, **Pages**, **Menu**, **Documents** and **Site Settings**.
+The left sidebar lists everything you can edit: **Site Notice**, **Pages**, **Menu**, **Documents**, **Redirects** and **Site Settings**. The **Traffic report** button at the bottom left shows addresses people tried that don't exist.
 
 ---
 
@@ -144,6 +144,41 @@ The page is published, but it isn't in the menu yet. To add it, see the next sec
    - **Opens another website**: turn this on for links to other sites (billing portal, sign-up). They get a ↗ arrow.
 4. Drag links to reorder them. Use the menu on each item to remove it.
 5. Click **Save**.
+
+---
+
+## Adding or changing a redirect
+
+A redirect sends visitors from an old or mistyped address to the right page. For example, the old site's `/faq/` sends people to `/support/faq/`.
+
+1. Click **Redirects**, then **Redirects**.
+2. Click **Add** and fill in:
+   - **Old address**: the address people arrive at, starting with `/`, for example `/old-plans-page/`. End it with `*` to catch everything below it: `/2019/*` matches every address that starts with `/2019/`.
+   - **Send to**: a page on this site (`/plans/`), a full web address, or a token such as `{{signup_url}}`.
+3. **Order matters.** Rules are checked from the top, and the first one that matches wins. Keep specific addresses above the ones ending in `*`. Drag rules to reorder them.
+4. Click **Save**. The redirect works in about 2 minutes.
+
+You don't need to add the same address with and without the final `/`. `/old-page/` also catches `/old-page`.
+
+---
+
+## Traffic report
+
+The **Traffic report** shows the last 7 days of:
+
+- **Not found (404):** addresses people tried that don't exist on the site, how often, and which page linked to them (when the browser says).
+- **Redirects used:** old addresses that were sent on to a new page. This shows how many people still use old bookmarks.
+
+To open it, click **Traffic report** at the bottom left of the editor (or go to `/admin/traffic/`). You must be signed in to the editor. If the page asks you to sign in, open the editor, sign in, and come back.
+
+**What to do with a 404:**
+
+- **People expect a page that moved or was renamed:** click **Add redirect…** next to it. This copies the address and opens the Redirects list. Click **Add**, paste the address into **Old address**, and choose where to send people.
+- **A page on our own site has a broken link:** "Linked from" shows a `lymefiber.net` address. Open that page in **Pages** and fix the link.
+- **People want a page that should exist:** add the page (see [Adding a new page](#adding-a-new-page)).
+- **Junk addresses** such as `/wp-login.php` or `/.env` are automated scanners looking for weaknesses. They are hidden unless you untick **Hide bot probes**. Ignore them.
+
+Entries older than 7 days are deleted automatically. Visitors' IP addresses are never recorded.
 
 ---
 

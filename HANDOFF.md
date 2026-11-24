@@ -13,6 +13,8 @@ Everything account-specific is listed here so the site can be handed on.
 | Editor login helper (Worker) | `lymefiber-cms-auth` → https://lymefiber-cms-auth.richard-e-brown.workers.dev | `public/admin/config.yml` (`backend.base_url`); source in `cms-auth/` |
 | Login helper allowed sites | `lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net` | `cms-auth/wrangler.toml` (`ALLOWED_DOMAINS`) |
 | GitHub OAuth App | "LymeFiber Site Editor", owned by GitHub user `richb-hanover`; callback `…workers.dev/callback` | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (set in Cloudflare dashboard) |
+| Traffic log database | Cloudflare D1 database `lymefiber-traffic`, bound to the Pages project as `TRAFFIC_DB` (Production and Preview) | Pages project → Settings → Bindings; schema in `functions/schema.sql` |
+| Functions failure mode | **Fail open** (if the free daily limit of 100,000 Function requests is reached, pages are still served; only redirects of old addresses and logging stop) | Pages project → Settings → Runtime |
 | Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages" installed on the **LymeFiber** organization, with `lymefiber-site` under Repository access | github.com/organizations/LymeFiber/settings/installations |
 
 ## Launch day (switching lymefiber.net to the new site)
@@ -50,7 +52,45 @@ Do this after the WCVT cutover, once managers have approved the test site.
 
 **GitHub:** editors use their own GitHub accounts, added as collaborators on the repository. Day-to-day editing (outage notices, pages, PDFs) only needs GitHub access, not Cloudflare.
 
+## Traffic report and redirects (Pages Functions)
+
+`functions/_middleware.js` runs in front of every page except build assets (see `public/_routes.json`). It:
+
+1. **Performs the redirects** from `src/data/redirects.yaml`. Cloudflare does not apply `_redirects` to requests that go through Functions, so the build writes the same rules to `functions/_lib/rules.generated.js` (git-ignored) and the middleware uses them, with the same matching code as the build (`functions/_lib/resolve.js`). `dist/_redirects` is still written, as a fallback if Functions stop (fail open).
+2. **Logs each redirect and 404** to D1: time, site address, path, status, redirect target and referring page. No IP addresses or browser details. Rows older than 7 days are deleted automatically.
+
+Editors see the log at `/admin/traffic/` (button in the editor). It calls `/api/traffic` (`functions/api/traffic.js`), which only answers people whose GitHub sign-in can push to the repository.
+
+**One-time setup** (already done if the table above has values):
+
+1. Create the database: `npx wrangler@4.158.0 d1 create lymefiber-traffic` (or Cloudflare dashboard → Storage & Databases → D1 → Create).
+2. Create the table: `npx wrangler@4.158.0 d1 execute lymefiber-traffic --remote --file functions/schema.sql`.
+3. Pages project → Settings → Bindings → Add → D1 database: variable name `TRAFFIC_DB`, database `lymefiber-traffic`. Do this for Production and Preview.
+4. Pages project → Settings → Runtime → set **Fail open**.
+5. Redeploy (Deployments → ⋯ → Retry) so the binding takes effect.
+
+**Running it locally:**
+
+```
+npm run build
+npx wrangler@4.158.0 pages dev dist --d1 TRAFFIC_DB
+sqlite3 .wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite < functions/schema.sql   # once
+```
+
+(`wrangler d1 execute --local` doesn't work here because the Pages project has no `wrangler.toml` binding.) Then http://localhost:8788/. To see the report locally, call the API with your own GitHub token: `curl -H "Authorization: Bearer $(gh auth token)" localhost:8788/api/traffic`.
+
+**Removing it later** (when old-address traffic has died down):
+
+1. Delete `functions/`, `public/_routes.json`, `public/admin/traffic/`, the `#traffic-link` button in `public/admin/index.html`, the generated-rules lines in `scripts/gen-redirects.mjs`, and the related tests. `dist/_redirects` then handles redirects again on its own.
+2. Remove the `TRAFFIC_DB` binding from the Pages project and delete the `lymefiber-traffic` database.
+
 ## Change log
+
+### 2026-11-24
+
+- **Traffic report.** A log of 404s and redirects for the last 7 days, visible to editors at `/admin/traffic/`. Redirects are now performed by `functions/_middleware.js` (see [Traffic report and redirects](#traffic-report-and-redirects-pages-functions)).
+- **Redirects can be edited in the editor** (Redirects section). The comments at the top of `src/data/redirects.yaml` were replaced by hints in the editor; the editor may drop the group comments inside the file when it saves.
+- **System Upgrade FAQ removed.** Its menu link is gone and the old `/system-upgrade-faq/` address now goes to `/support/`. The page text is kept in `document-sources/system-upgrade.md`.
 
 ### 2026-11-23
 
