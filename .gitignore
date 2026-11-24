@@ -24,3 +24,5 @@ public/documents/OLD/
 
 # generated at build time by scripts/gen-redirects.mjs
 functions/_lib/rules.generated.js
+# local Cloudflare dev state (wrangler pages dev)
+.wrangler/
