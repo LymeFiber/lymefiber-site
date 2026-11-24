@@ -41,7 +41,7 @@ If you need conduit or a pull string installed to your home/business, the follow
 **NOTE:** It may be possible to get a pull string through your existing conduit by yourself or by hiring a contractor (usually an electrician.). If you do so:
 
 -   Shorter, newer, and wider conduits are the best for this.
--   Some people have used a shop vac and/or leaf blower. [Here are some guidelines](http://www.doityourself.com/forum/communications-voice-radio-data-communications/427655-using-shop-vac-pull-string-thru-conduit.html).
+-   Some people have used a shop vac and/or leaf blower. [Here are some guidelines](https://www.doityourself.com/forum/communications-voice-radio-data-communications/427655-using-shop-vac-pull-string-thru-conduit.html).
 
 In shorter underground drops, rigid snakes can be used to install a pull string.
 
