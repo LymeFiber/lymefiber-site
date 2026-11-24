@@ -15,7 +15,7 @@ Everything account-specific is listed here so the site can be handed on.
 | Editor login helper (Worker) | `lymefiber-cms-auth` → https://lymefiber-cms-auth.richard-e-brown.workers.dev | `public/admin/config.yml` (`backend.base_url`); source in `cms-auth/` |
 | Login helper allowed sites | `lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net` | `cms-auth/wrangler.toml` (`ALLOWED_DOMAINS`) |
 | GitHub OAuth App | "LymeFiber Site Editor", owned by GitHub user `richb-hanover`; callback `…workers.dev/callback` | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (set in Cloudflare dashboard) |
-| Traffic log database | Cloudflare D1 database `lymefiber-traffic`, bound to the Pages project as `TRAFFIC_DB` (Production and Preview) | Pages project → Settings → Bindings; schema in `functions/schema.sql` |
+| Traffic log database | Cloudflare D1 database `lymefiber-traffic` (tables `hits` and `searches`), bound to the Pages project as `TRAFFIC_DB` (Production and Preview) | Pages project → Settings → Bindings; schema in `functions/schema.sql` |
 | Functions failure mode | **Fail open** (if the free daily limit of 100,000 Function requests is reached, the site is served as plain static files: pages and redirects keep working from `dist/_redirects`; only logging stops) | Pages project → Settings → Runtime |
 | Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages" installed on the **LymeFiber** organization, with `lymefiber-site` under Repository access | github.com/organizations/LymeFiber/settings/installations |
 
@@ -87,15 +87,25 @@ sqlite3 .wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite < functions/sc
 
 (`wrangler d1 execute --local` doesn't work here because the Pages project has no `wrangler.toml` binding.) Then http://localhost:8788/. To see the report locally, call the API with your own GitHub token: `curl -H "Authorization: Bearer $(gh auth token)" localhost:8788/api/traffic`.
 
+## Site search (Pagefind)
+
+The magnifying glass in the header opens a search box. It uses [Pagefind](https://pagefind.app/): `npm run build` runs `pagefind --site dist` after Astro, which writes a small search index to `dist/pagefind/`. Searching happens in the visitor's browser; there is no search server or account.
+
+- Only each page's main content is indexed (`data-pagefind-body` on `<main>` in `BaseLayout.astro`; breadcrumbs are ignored; the 404 page passes `searchable={false}`). PDF contents are not indexed: PDFs are found by their title and description on the Documents page.
+- The panel and its script are in `src/components/SiteSearch.astro`. With `astro dev` there is no index, so the panel says search works on the published site; use `npm run build` and `wrangler pages dev dist` to try it locally.
+- Searches that find nothing (3+ characters, after a 2-second pause, Enter, or closing the panel; once per search per page view) are sent to `/api/search-miss` (`functions/api/search-miss.js`) and stored in the `searches` table, kept 7 days. They appear in the Traffic report. The decision logic is `src/lib/search-miss.ts`.
+- `/pagefind/*` is excluded from Functions in `public/_routes.json`, so the index files don't count against the Functions quota.
+
 **Removing it later** (when old-address traffic has died down):
 
-1. Delete `functions/`, `public/_routes.json`, `public/admin/traffic/`, the `#traffic-link` button in `public/admin/index.html`, the generated-rules lines in `scripts/gen-redirects.mjs`, and the related tests. `dist/_redirects` then handles redirects again on its own.
+1. Delete `functions/`, `public/_routes.json`, `public/admin/traffic/`, the `#traffic-link` button in `public/admin/index.html`, the generated-rules lines in `scripts/gen-redirects.mjs`, and the related tests. `dist/_redirects` then handles redirects again on its own. Site search keeps working; only the logging of unanswered searches stops (remove the `MissLogger` lines from `SiteSearch.astro`).
 2. Remove the `TRAFFIC_DB` binding from the Pages project and delete the `lymefiber-traffic` database.
 
 ## Change log
 
 ### 2026-11-24
 
+- **Site search.** A magnifying glass in the header searches every page (Pagefind, built at deploy time). Searches that find nothing are logged and shown in the Traffic report. The `searches` table was added to `lymefiber-traffic` (`functions/schema.sql`).
 - **DNS stays at DreamHost.** lymefiber.net will not move to Cloudflare. The launch steps now put the site at `www.lymefiber.net` (CNAME at DreamHost) with DreamHost redirecting the bare domain; see [Launch day](#launch-day-switching-lymefibernet-to-the-new-site).
 - **GitHub:** the repository is under the LymeFiber organization; the "Moving to LymeFiber's own GitHub organization" steps were replaced by a short note of what is done and what remains (the OAuth App).
 - **Business broadband labels:** inside installation fee changed from $99 to $150 in the four Business PDFs and the FCC CSV, to match the Plans page. (Gaiia's own data still says $99.)
