@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { RETENTION_MS, logHit, pruneOld, recentHits } from '../functions/_lib/hits.js';
+import { RETENTION_MS, logHit, logSearch, pruneOld, recentHits, recentSearches } from '../functions/_lib/hits.js';
 
 /** A stand-in for a D1 database that records each statement and its bound values. */
 function fakeDb(rows: any[] = []) {
@@ -47,10 +47,28 @@ describe('logHit', () => {
   });
 });
 
-test('pruneOld deletes rows older than seven days', async () => {
+test('pruneOld deletes hits and searches older than seven days', async () => {
   const db = fakeDb();
   await pruneOld(db, NOW);
-  expect(db.calls[0].sql).toMatch(/DELETE FROM hits WHERE ts < \?/);
+  expect(db.calls.map((c) => c.sql)).toEqual([
+    expect.stringMatching(/DELETE FROM hits WHERE ts < \?/),
+    expect.stringMatching(/DELETE FROM searches WHERE ts < \?/),
+  ]);
+  expect(db.calls.map((c) => c.args)).toEqual([[NOW - 604800000], [NOW - 604800000]]);
+});
+
+test('logSearch inserts the time, site address and search text, cut to 100 characters', async () => {
+  const db = fakeDb();
+  await logSearch(db, { ts: NOW, host: 'lymefiber.net', query: 'z'.repeat(150) });
+  expect(db.calls[0].sql).toMatch(/^INSERT INTO searches/);
+  expect(db.calls[0].args).toEqual([NOW, 'lymefiber.net', 'z'.repeat(100)]);
+});
+
+test('recentSearches returns the last seven days', async () => {
+  const rows = [{ ts: NOW, host: 'h', query: 'q' }];
+  const db = fakeDb(rows);
+  expect(await recentSearches(db, NOW)).toEqual(rows);
+  expect(db.calls[0].sql).toMatch(/FROM searches WHERE ts >= \?/);
   expect(db.calls[0].args).toEqual([NOW - 604800000]);
 });
 

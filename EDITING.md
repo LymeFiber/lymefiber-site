@@ -168,6 +168,7 @@ The **Traffic report** shows the last 7 days of:
 
 - **Not found (404):** addresses people tried that don't exist on the site, how often, and which page linked to them (when the browser says).
 - **Redirects used:** old addresses that were sent on to a new page. This shows how many people still use old bookmarks.
+- **Searches that found nothing:** what people typed into the site's search box (the magnifying glass) when no page matched. If the same thing comes up often, consider adding it to the FAQ or to a page, using the words people search for.
 
 To open it, click **Traffic report** at the bottom left of the editor (or go to `/admin/traffic/`). You must be signed in to the editor. If the page asks you to sign in, open the editor, sign in, and come back.
 

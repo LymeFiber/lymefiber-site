@@ -14,8 +14,10 @@ interface Props {
   notice?: Notice;
   breadcrumbs?: Crumb[];
   bodyClass?: string;
+  /** false keeps the page out of the site search index (e.g. the 404 page). */
+  searchable?: boolean;
 }
-const { title, description = '', permalink, notice, breadcrumbs = [], bodyClass } = Astro.props;
+const { title, description = '', permalink, notice, breadcrumbs = [], bodyClass, searchable = true } = Astro.props;
 const site = Astro.site ?? new URL('https://lymefiber.net');
 const canonical = new URL(permalink, site).href;
 const ogImage = new URL('/og-image.png', site).href;
@@ -48,7 +50,7 @@ const fullTitle = permalink === '/' ? `LymeFiber | ${title}` : `${title} | LymeF
     <a class="skip-link" href="#main">Skip to content</a>
     <NoticeBanner notice={notice} />
     <Header permalink={permalink} />
-    <main id="main">
+    <main id="main" data-pagefind-body={searchable ? '' : undefined}>
       <Breadcrumbs crumbs={breadcrumbs} />
       <slot />
     </main>

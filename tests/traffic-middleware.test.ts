@@ -126,7 +126,7 @@ describe('pruning', () => {
   test('about one request in a hundred prunes old rows', async () => {
     const c = ctx('https://lymefiber.net/nope/', { status: 404 });
     await run(c, () => 0.001);
-    expect(c.db.deletes).toEqual([[NOW - 604800000]]);
+    expect(c.db.deletes).toEqual([[NOW - 604800000], [NOW - 604800000]]);
   });
 
   test('other requests do not prune', async () => {

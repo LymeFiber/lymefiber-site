@@ -2,6 +2,7 @@
 import wordmark from '../assets/wordmark.svg?raw';
 import { getMenu, getSettings, type MenuItem } from '../lib/data';
 import { replaceTokens } from '../lib/tokens';
+import SiteSearch from './SiteSearch.astro';
 
 const settings = getSettings();
 const resolve = (href = '#') => replaceTokens(href, settings).text;
@@ -12,6 +13,7 @@ const sectionActive = (children: { href?: string }[] = []) => children.some((c) 
 <header class="site-header">
   <div class="site-header__inner">
     <a class="wordmark" href="/" set:html={wordmark} />
+    <button class="search-toggle search-toggle--mobile" type="button" aria-expanded="false" aria-controls="site-search" aria-label="Search the site"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul class="site-nav__list">
@@ -40,9 +42,11 @@ const sectionActive = (children: { href?: string }[] = []) => children.some((c) 
           </li>
         ))}
       </ul>
+      <button class="search-toggle search-toggle--desktop" type="button" aria-expanded="false" aria-controls="site-search" aria-label="Search the site"><svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21"/></svg></button>
       <a class="button signup" href={settings.signup_url}>Sign Up</a>
     </nav>
   </div>
+  <SiteSearch />
 </header>
 
 <script>

@@ -1,0 +1,130 @@
+---
+// Search panel under the header. Opened by the .search-toggle buttons in Header.astro.
+// Uses the Pagefind index built into dist/pagefind/ (see package.json "build").
+---
+<div id="site-search" class="site-search" role="search" hidden>
+  <div class="site-search__inner">
+    <input class="site-search__input" type="search" aria-label="Search the site" placeholder="Search the site" autocomplete="off" spellcheck="false" />
+    <p class="site-search__status" role="status" aria-live="polite"></p>
+    <ul class="site-search__results"></ul>
+  </div>
+</div>
+
+<script>
+  import { MissLogger } from '../lib/search-miss';
+
+  const MAX_RESULTS = 8;
+  const panel = document.getElementById('site-search') as HTMLDivElement;
+  const input = panel.querySelector('input') as HTMLInputElement;
+  const status = panel.querySelector('.site-search__status') as HTMLParagraphElement;
+  const list = panel.querySelector('.site-search__results') as HTMLUListElement;
+  const toggles = [...document.querySelectorAll<HTMLButtonElement>('.search-toggle')];
+
+  type Pagefind = {
+    options: (o: object) => Promise<void>;
+    debouncedSearch: (q: string, o?: object, ms?: number) => Promise<{ results: { data: () => Promise<PagefindData> }[] } | null>;
+  };
+  type PagefindData = { url: string; excerpt: string; meta: { title?: string } };
+
+  let pagefind: Pagefind | null = null;
+  let unavailable = false;
+  let opener: HTMLButtonElement | null = null;
+
+  const logger = new MissLogger((q) => {
+    const body = new Blob([JSON.stringify({ q })], { type: 'application/json' });
+    if (!navigator.sendBeacon?.('/api/search-miss', body)) fetch('/api/search-miss', { method: 'POST', body, keepalive: true }).catch(() => {});
+  });
+
+  async function loadPagefind() {
+    if (pagefind || unavailable) return;
+    try {
+      const url = '/pagefind/pagefind.js';
+      pagefind = (await import(/* @vite-ignore */ url)) as Pagefind;
+      await pagefind.options({ excerptLength: 20 });
+    } catch {
+      unavailable = true;
+      status.textContent = 'Search works on the published site (the search index is made when the site is built).';
+    }
+  }
+
+  function setOpen(open: boolean, from?: HTMLButtonElement) {
+    if (!open) logger.flush();
+    panel.hidden = !open;
+    toggles.forEach((t) => t.setAttribute('aria-expanded', String(open)));
+    if (open) {
+      opener = from ?? null;
+      input.focus();
+      input.select();
+      loadPagefind();
+    } else {
+      opener?.focus();
+    }
+  }
+
+  function render(items: PagefindData[], total: number, q: string) {
+    list.replaceChildren(
+      ...items.map((d) => {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
+        a.href = d.url;
+        const title = document.createElement('strong');
+        title.textContent = d.meta.title ?? d.url;
+        const excerpt = document.createElement('span');
+        excerpt.innerHTML = d.excerpt; // Pagefind excerpts are our own page text with <mark> highlights
+        a.append(title, excerpt);
+        li.append(a);
+        return li;
+      }),
+    );
+    status.textContent = total === 0 ? `No pages match “${q}”.` : total > MAX_RESULTS ? `Showing ${MAX_RESULTS} of ${total} pages.` : '';
+  }
+
+  async function search() {
+    const q = input.value;
+    if (!q.trim()) {
+      list.replaceChildren();
+      status.textContent = '';
+      logger.update('', 0);
+      return;
+    }
+    await loadPagefind();
+    if (!pagefind) return;
+    const res = await pagefind.debouncedSearch(q, {}, 200);
+    if (res === null) return; // a newer search replaced this one
+    const items = await Promise.all(res.results.slice(0, MAX_RESULTS).map((r) => r.data()));
+    if (input.value !== q) return;
+    render(items, res.results.length, q.trim());
+    logger.update(q, res.results.length);
+  }
+
+  const links = () => [...list.querySelectorAll<HTMLAnchorElement>('a')];
+
+  toggles.forEach((t) => t.addEventListener('click', () => setOpen(panel.hidden, t)));
+  input.addEventListener('input', search);
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      logger.flush();
+      links()[0]?.click();
+    } else if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      links()[0]?.focus();
+    }
+  });
+  list.addEventListener('keydown', (e) => {
+    const all = links();
+    const i = all.indexOf(document.activeElement as HTMLAnchorElement);
+    if (e.key === 'ArrowDown' && i < all.length - 1) { e.preventDefault(); all[i + 1].focus(); }
+    if (e.key === 'ArrowUp') { e.preventDefault(); (i > 0 ? all[i - 1] : input).focus(); }
+  });
+  list.addEventListener('click', (e) => { if ((e.target as Element).closest('a')) logger.flush(); });
+  // Esc closes the search before anything else (capture phase runs ahead of the menu's handler).
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) { e.stopImmediatePropagation(); setOpen(false); }
+  }, true);
+  document.addEventListener('click', (e) => {
+    const target = e.target as Element;
+    if (!panel.hidden && !panel.contains(target) && !target.closest('.search-toggle')) setOpen(false);
+  });
+  window.addEventListener('pagehide', () => logger.flush());
+</script>

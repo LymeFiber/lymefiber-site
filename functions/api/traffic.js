@@ -1,6 +1,6 @@
 // GET /api/traffic — the last seven days of 404s and redirects, for signed-in site editors only.
-import { isEditor, summarize } from '../_lib/report.js';
-import { pruneOld, recentHits } from '../_lib/hits.js';
+import { isEditor, summarize, summarizeSearches } from '../_lib/report.js';
+import { pruneOld, recentHits, recentSearches } from '../_lib/hits.js';
 
 const json = (status, body) =>
   new Response(JSON.stringify(body), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
@@ -19,8 +19,15 @@ export async function handleReport(context, now = Date.now(), fetchFn = fetch) {
 
   await pruneOld(db, now);
   const hits = await recentHits(db, now);
-  const hosts = [...new Set(hits.map((h) => h.host))].sort();
+  const searches = await recentSearches(db, now);
+  const hosts = [...new Set([...hits, ...searches].map((h) => h.host))].sort();
   const host = new URL(context.request.url).searchParams.get('host');
-  const shown = host ? hits.filter((h) => h.host === host) : hits;
-  return json(200, { generatedAt: now, hosts, host: host ?? '', ...summarize(shown) });
+  const onHost = (r) => !host || r.host === host;
+  return json(200, {
+    generatedAt: now,
+    hosts,
+    host: host ?? '',
+    ...summarize(hits.filter(onHost)),
+    searches: summarizeSearches(searches.filter(onHost)),
+  });
 }

@@ -54,7 +54,7 @@ describe('Pages Functions redirect rules', () => {
     expect(r).toEqual({
       version: 1,
       include: ['/*'],
-      exclude: ['/_astro/*', '/fonts/*', '/images/*', '/favicon.svg', '/og-image.png', '/admin/*'],
+      exclude: ['/_astro/*', '/fonts/*', '/images/*', '/favicon.svg', '/og-image.png', '/admin/*', '/pagefind/*'],
     });
   });
 

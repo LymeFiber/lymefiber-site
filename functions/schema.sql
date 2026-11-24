@@ -9,3 +9,11 @@ CREATE TABLE IF NOT EXISTS hits (
   referrer TEXT             -- the page that linked here, if the browser said
 );
 CREATE INDEX IF NOT EXISTS hits_ts ON hits(ts);
+
+-- Site searches that found nothing (logged by /api/search-miss).
+CREATE TABLE IF NOT EXISTS searches (
+  ts INTEGER NOT NULL,      -- time, UTC milliseconds
+  host TEXT,                -- site address the search was made on
+  query TEXT NOT NULL       -- the search text, at most 100 characters
+);
+CREATE INDEX IF NOT EXISTS searches_ts ON searches(ts);
