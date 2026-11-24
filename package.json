@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node scripts/gen-redirects.mjs",
+    "build": "astro build && pagefind --site dist && node scripts/gen-redirects.mjs",
     "preview": "astro preview",
     "astro": "astro",
     "test": "TZ=UTC vitest run",
@@ -20,6 +20,7 @@
     "@astrojs/markdown-satteri": "^0.4.10",
     "@astrojs/sitemap": "^3.7.6",
     "opentype.js": "^2.0.0",
+    "pagefind": "^1.6.0",
     "turndown": "^7.2.5",
     "turndown-plugin-gfm": "^1.0.2",
     "vitest": "^5.1.0",
