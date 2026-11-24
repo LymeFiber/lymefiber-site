@@ -8,6 +8,8 @@ Everything account-specific is listed here so the site can be handed on.
 |---|---|---|
 | GitHub repository | `LymeFiber/lymefiber-site` (public; moved from `richb-hanover/lymefiber-site` on 2026-11-09) | `public/admin/config.yml` (`backend.repo`); `EDITING.md` links |
 | Cloudflare Pages project | `lymefiber-site` → https://lymefiber-site.pages.dev, production branch `main` | Cloudflare dashboard |
+| Domain registrar and DNS | **DreamHost** for both. lymefiber.net's DNS stays at DreamHost; it is **not** moved to Cloudflare (decided 2026-11-24). Email (MX via MailChannels, SPF/DKIM/DMARC) is unaffected. | DreamHost panel → Domains |
+| Live address (after launch) | https://www.lymefiber.net (DreamHost DNS: CNAME `www` → `lymefiber-site.pages.dev`). The bare `lymefiber.net` redirects there from DreamHost, because Cloudflare Pages can only serve a bare domain whose DNS is on Cloudflare. | Pages project → Custom domains; DreamHost panel |
 | Test address | https://test.lymefiber.net (DreamHost DNS: CNAME `test` → `lymefiber-site.pages.dev`) | Pages project → Custom domains |
 | Build settings | Framework Astro, build `npm run build`, output `dist`; variables `NODE_VERSION=26`, `SITE_NOINDEX=1` (until launch) | Pages project → Settings |
 | Editor login helper (Worker) | `lymefiber-cms-auth` → https://lymefiber-cms-auth.richard-e-brown.workers.dev | `public/admin/config.yml` (`backend.base_url`); source in `cms-auth/` |
@@ -21,24 +23,30 @@ Everything account-specific is listed here so the site can be handed on.
 
 Do this after the WCVT cutover, once managers have approved the test site.
 
+DNS stays at DreamHost (we are **not** moving it to Cloudflare). Cloudflare Pages can serve `www.lymefiber.net` through a DreamHost CNAME, but it cannot serve the bare `lymefiber.net` unless Cloudflare runs the DNS. So the site lives at **www.lymefiber.net**, and DreamHost redirects the bare domain there.
+
 1. **Update Site Settings** in the editor with WCVT's phone numbers, emails, portal and sign-up addresses.
-2. **Let search engines in:** in the Pages project, delete the `SITE_NOINDEX` variable, then redeploy (Deployments → ⋯ → Retry).
-3. **Move lymefiber.net's DNS to Cloudflare** (Cloudflare → Add a domain → `lymefiber.net`, Free plan):
-   - Before changing anything at DreamHost, compare Cloudflare's imported records with DreamHost's DNS page. **Copy every MX, TXT (SPF, DKIM, DMARC) and mail-related record exactly**, or `@lymefiber.net` email will stop.
-   - Then change the nameservers at the domain registrar to the two Cloudflare gives you.
-4. **Attach the domain:** Pages project → Custom domains → add `lymefiber.net` and `www.lymefiber.net`.
-5. **Send www to the bare domain:** Cloudflare → lymefiber.net → Rules → Redirect Rules → `www.lymefiber.net/*` → `https://lymefiber.net/${1}` (301).
-6. **Check:** the home page, an old address such as `/faq/` (should redirect), the editor login at `/admin/`, and an email sent to a `@lymefiber.net` address.
-7. Update the editor address in `EDITING.md` and the OAuth App's Homepage URL to `https://lymefiber.net`.
-8. Optional: remove `test.lymefiber.net` from Custom domains and its CNAME at DreamHost.
+2. **Make www the site's own address** (a code change, then push): `site` in `astro.config.mjs`, the fallback in `src/layouts/BaseLayout.astro`, and `site_url` in `public/admin/config.yml` all become `https://www.lymefiber.net`. This fixes the sitemap, canonical links and social-sharing previews.
+3. **Let search engines in:** in the Pages project, delete the `SITE_NOINDEX` variable, then redeploy (Deployments → ⋯ → Retry).
+4. **Attach www in Cloudflare first:** Pages project → Custom domains → Set up a domain → `www.lymefiber.net`. Cloudflare will say which CNAME it expects. (Do this *before* step 5: a CNAME that Cloudflare doesn't know about yet gives visitors a 522 error.)
+5. **Point www at Cloudflare in DreamHost:** DreamHost panel → Domains → DNS for lymefiber.net → `www` CNAME `lymefiber-site.pages.dev`, replacing the current `www` A record (today `69.163.231.55`, the WordPress server). If DreamHost won't let you edit `www` because its web hosting manages that record, first change lymefiber.net's hosting to **Redirect** (step 6); if it still won't, ask DreamHost support to let `www` be a custom CNAME. Wait until the Custom domains page shows `www.lymefiber.net` as **Active** (it issues the certificate itself; lymefiber.net has no CAA records, so nothing blocks it).
+6. **Redirect the bare domain at DreamHost:** set lymefiber.net to redirect to `https://www.lymefiber.net`, **keeping the path**, so an old link such as `https://lymefiber.net/faq/` lands on `https://www.lymefiber.net/faq/` (and the site then sends it on to `/support/faq/`). Keep DreamHost's free Let's Encrypt certificate on lymefiber.net so `https://lymefiber.net/...` redirects without a security warning.
+7. **Don't touch email records.** MX, SPF, DKIM and DMARC stay exactly as they are at DreamHost.
+8. **Check:**
+   - `https://www.lymefiber.net/` shows the new site; `http://` versions redirect to `https://`.
+   - `https://lymefiber.net/faq/` → `https://www.lymefiber.net/faq/` → `/support/faq/`.
+   - The editor login works at `https://www.lymefiber.net/admin/`, and the Traffic report shows hits for `www.lymefiber.net`.
+   - An email sent to and from a `@lymefiber.net` address still arrives.
+9. Update the editor address in `EDITING.md` and the OAuth App's Homepage URL to `https://www.lymefiber.net`.
+10. Optional: remove `test.lymefiber.net` from Custom domains and its CNAME at DreamHost.
 
-## Moving to LymeFiber's own GitHub organization
+## GitHub repository (done)
 
-1. GitHub: repository **Settings → Transfer** to the LymeFiber organization.
-2. Update `backend.repo` in `public/admin/config.yml` and the links in `EDITING.md`.
-3. Transfer the OAuth App to the organization (OAuth App settings → Transfer ownership), or create a new one and update the two Worker secrets.
-4. In Cloudflare, reconnect the Pages project to the moved repository (the GitHub app must have access to it).
-5. Re-invite editors as organization members or collaborators.
+The repository belongs to the **LymeFiber** GitHub organization: `LymeFiber/lymefiber-site`. The editor (`backend.repo` in `public/admin/config.yml`), the `EDITING.md` links and the Cloudflare Pages connection all use it.
+
+- The old address `richb-hanover/lymefiber-site` still redirects to it, but use the LymeFiber address in new clones and settings.
+- The GitHub OAuth App ("LymeFiber Site Editor") is still owned by `richb-hanover`. To hand it on: OAuth App settings → Transfer ownership to the LymeFiber organization, or create a new one there and update the Worker secrets `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`.
+- Editors are added as organization members or repository collaborators (see `EDITING.md`, "Adding an editor").
 
 ## Who has access, and how it passes on
 
@@ -48,7 +56,7 @@ Do this after the WCVT cutover, once managers have approved the test site.
 - To add someone: **Manage Account → Members → Invite**, with the **Super Administrator** role. They accept from their email and set up their own two-factor.
 - To hand over: invite the successor, confirm they can log in, then they remove the departing person's membership.
 - Keep at least two Super Administrators at all times (for example, a second board member), so the account is never locked to one person who becomes unavailable.
-- If a login email is on the lymefiber.net domain: when the domain's DNS moves into Cloudflare, copy the email (MX) records exactly, or that login's email could stop working. Each person should keep their own two-factor backup codes.
+- lymefiber.net's DNS and email stay at DreamHost, so Cloudflare logins that use an `@lymefiber.net` address are not affected by the website launch. Each person should keep their own two-factor backup codes.
 
 **GitHub:** editors use their own GitHub accounts, added as collaborators on the repository. Day-to-day editing (outage notices, pages, PDFs) only needs GitHub access, not Cloudflare.
 
@@ -88,6 +96,9 @@ sqlite3 .wrangler/state/v3/d1/miniflare-D1DatabaseObject/*.sqlite < functions/sc
 
 ### 2026-11-24
 
+- **DNS stays at DreamHost.** lymefiber.net will not move to Cloudflare. The launch steps now put the site at `www.lymefiber.net` (CNAME at DreamHost) with DreamHost redirecting the bare domain; see [Launch day](#launch-day-switching-lymefibernet-to-the-new-site).
+- **GitHub:** the repository is under the LymeFiber organization; the "Moving to LymeFiber's own GitHub organization" steps were replaced by a short note of what is done and what remains (the OAuth App).
+- **Business broadband labels:** inside installation fee changed from $99 to $150 in the four Business PDFs and the FCC CSV, to match the Plans page. (Gaiia's own data still says $99.)
 - **Traffic report.** A log of 404s and redirects for the last 7 days, visible to editors at `/admin/traffic/`. Redirects are now performed by `functions/_middleware.js` (see [Traffic report and redirects](#traffic-report-and-redirects-pages-functions)).
 - **Redirects can be edited in the editor** (Redirects section). The comments at the top of `src/data/redirects.yaml` were replaced by hints in the editor; the editor may drop the group comments inside the file when it saves.
 - **System Upgrade FAQ removed.** Its menu link is gone and the old `/system-upgrade-faq/` address now goes to `/support/`. The page text is kept in `document-sources/system-upgrade.md`.
