@@ -4,6 +4,8 @@ description: "LymeFiber’s August 2025 move to the Gaiia billing system: settin
 permalink: /support/system-upgrade/
 ---
 
+# OLD FROM 2025...
+
 ## Setting Up Your Account
 Every LymeFiber customer received an email on Wednesday, August 13, 2025 with the subject _Your LymeFiber Customer Portal Creation Link_. In that email, each customer received a unique link that is required to create their customer portal account and add their payment details.
 

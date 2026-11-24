@@ -117,7 +117,7 @@ In no case shall LymeFiber LLC, our directors, officers, employees, affiliates, 
 ## Section 14 – Indemnification
 You agree to indemnify, defend and hold harmless LymeFiber LLC and our parent, subsidiaries, affiliates, partners, officers, directors, agents, contractors, licensors, service providers, subcontractors, suppliers, interns and employees, harmless from any claim or demand, including reasonable attorneys’ fees, made by any third-party due to or arising out of your breach of these Terms of Service or the documents they incorporate by reference, or your violation of any law or the rights of a third-party.
 
-SECTION 15 – SEVER-ABILITY
+## Section 15 - Severability
 
 In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforce ability of any other remaining provisions.
 

@@ -18,7 +18,7 @@ redirects:
   - { from: /current-internet-subscriber-requesting-phone-service/, to: /phone/ }
   # Support
   - { from: /faq/, to: /support/faq/ }
-  - { from: /system-upgrade-faq/, to: /support/system-upgrade/ }
+  - { from: /system-upgrade-faq/, to: /support/ }
   - { from: /contact-us/, to: /support/contact/ }
   - { from: /lymefiber-billing-portal/, to: /support/ }
   # About

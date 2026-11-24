@@ -17,7 +17,6 @@ Manage voicemail and calling features in the [Phone Portal]({{phone_portal_url}}
 ## Answers to common questions
 
 - [Frequently Asked Questions](/support/faq/)
-- [System Upgrade FAQ](/support/system-upgrade/)
 - [Power Outages and Phone Service](/documents/LymeFiber-Power-Outages-and-Phone-Service.pdf)
 - [Broadband Fact Labels](/plans/broadband-labels/): clear information about the cost and features of each plan
 
