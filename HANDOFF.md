@@ -14,7 +14,7 @@ Everything account-specific is listed here so the site can be handed on.
 | Login helper allowed sites | `lymefiber-site.pages.dev, test.lymefiber.net, lymefiber.net, www.lymefiber.net` | `cms-auth/wrangler.toml` (`ALLOWED_DOMAINS`) |
 | GitHub OAuth App | "LymeFiber Site Editor", owned by GitHub user `richb-hanover`; callback `…workers.dev/callback` | Worker secrets `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (set in Cloudflare dashboard) |
 | Traffic log database | Cloudflare D1 database `lymefiber-traffic`, bound to the Pages project as `TRAFFIC_DB` (Production and Preview) | Pages project → Settings → Bindings; schema in `functions/schema.sql` |
-| Functions failure mode | **Fail open** (if the free daily limit of 100,000 Function requests is reached, pages are still served; only redirects of old addresses and logging stop) | Pages project → Settings → Runtime |
+| Functions failure mode | **Fail open** (if the free daily limit of 100,000 Function requests is reached, the site is served as plain static files: pages and redirects keep working from `dist/_redirects`; only logging stops) | Pages project → Settings → Runtime |
 | Cloudflare ↔ GitHub link | GitHub app "Cloudflare Workers and Pages" installed on the **LymeFiber** organization, with `lymefiber-site` under Repository access | github.com/organizations/LymeFiber/settings/installations |
 
 ## Launch day (switching lymefiber.net to the new site)

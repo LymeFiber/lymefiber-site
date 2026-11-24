@@ -155,7 +155,7 @@ A redirect sends visitors from an old or mistyped address to the right page. For
 2. Click **Add** and fill in:
    - **Old address**: the address people arrive at, starting with `/`, for example `/old-plans-page/`. End it with `*` to catch everything below it: `/2019/*` matches every address that starts with `/2019/`.
    - **Send to**: a page on this site (`/plans/`), a full web address, or a token such as `{{signup_url}}`.
-3. **Order matters.** Rules are checked from the top, and the first one that matches wins. Keep specific addresses above the ones ending in `*`. Drag rules to reorder them.
+3. **Which rule wins:** an exact address always wins over one ending in `*`, wherever it sits in the list. Among the `*` rules, the first match from the top wins, so put narrower ones (`/2019/03/*`) above broader ones (`/2019/*`). Drag rules to reorder them.
 4. Click **Save**. The redirect works in about 2 minutes.
 
 You don't need to add the same address with and without the final `/`. `/old-page/` also catches `/old-page`.

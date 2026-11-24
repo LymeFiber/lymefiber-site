@@ -1,4 +1,4 @@
-# Edited in the site editor under Redirects. First match wins.
+# Edited in the site editor under Redirects. Exact addresses win over * rules; among * rules the first match wins.
 redirects:
   # Plans
   - { from: /service-plans-pricing-2/, to: /plans/ }

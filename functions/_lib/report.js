@@ -57,15 +57,18 @@ const editorCache = new Map(); // token → { ok, until }
 export async function isEditor(token, fetchFn = fetch, now = Date.now()) {
   const cached = editorCache.get(token);
   if (cached && cached.until > now) return cached.ok;
-  let ok = false;
+  let ok;
   try {
     const res = await fetchFn(REPO_API, {
       headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'lymefiber-traffic-report' },
     });
     if (res.ok) ok = (await res.json())?.permissions?.push === true;
+    else if ([401, 403, 404].includes(res.status)) ok = false;
+    else return false; // GitHub trouble: deny this time, but don't remember it
   } catch {
-    ok = false;
+    return false; // network trouble: same
   }
+  for (const [t, v] of editorCache) if (v.until <= now) editorCache.delete(t);
   editorCache.set(token, { ok, until: now + CACHE_MS });
   return ok;
 }

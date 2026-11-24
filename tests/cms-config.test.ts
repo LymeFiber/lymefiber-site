@@ -69,10 +69,20 @@ describe('Redirects', () => {
   });
   test('is a list of old address → new address', () => {
     expect(list().widget).toBe('list');
-    expect(field(list().fields, 'from')).toMatchObject({ widget: 'string', required: true, pattern: ['^/', expect.any(String)] });
+    expect(field(list().fields, 'from')).toMatchObject({ widget: 'string', required: true, pattern: ['^/\\S*$', expect.any(String)] });
     expect(field(list().fields, 'to')).toMatchObject({ widget: 'string', required: true });
   });
-  test('explains that the first match wins', () => {
-    expect(col('redirects').description).toContain('first match wins');
+  test('explains that exact addresses win over ones ending in *', () => {
+    expect(col('redirects').description).toContain('Exact addresses always win');
+  });
+  test('rejects addresses with spaces, and targets that are not /path, a web address or a {{token}}', () => {
+    const from = new RegExp(field(list().fields, 'from').pattern[0]);
+    const to = new RegExp(field(list().fields, 'to').pattern[0]);
+    expect(from.test('/old-page/')).toBe(true);
+    expect(from.test('/2019/*')).toBe(true);
+    expect(from.test('/old doc.pdf')).toBe(false);
+    expect(from.test('old/')).toBe(false);
+    for (const ok of ['/support/faq/', 'https://order.lymefiber.net', '{{signup_url}}']) expect(to.test(ok)).toBe(true);
+    for (const bad of ['support/faq/', '/support faq/', 'www.example.com']) expect(to.test(bad)).toBe(false);
   });
 });

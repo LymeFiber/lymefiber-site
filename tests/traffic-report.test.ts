@@ -72,6 +72,16 @@ describe('isEditor', () => {
   test('false when GitHub rejects the token', async () => {
     expect(await isEditor('tok', gh(401, { message: 'Bad credentials' }))).toBe(false);
   });
+  test('a GitHub outage is not remembered as "not an editor"', async () => {
+    expect(await isEditor('tok', gh(502, { message: 'Bad gateway' }))).toBe(false);
+    const f = gh(200, { permissions: { push: true } });
+    expect(await isEditor('tok', f)).toBe(true);
+  });
+  test('a network error is not remembered either', async () => {
+    const down = Object.assign(async () => { throw new Error('offline'); }, { calls: [] });
+    expect(await isEditor('tok', down as any)).toBe(false);
+    expect(await isEditor('tok', gh(200, { permissions: { push: true } }))).toBe(true);
+  });
   test('remembers the answer for the same token', async () => {
     const f = gh(200, { permissions: { push: true } });
     await isEditor('tok', f);
